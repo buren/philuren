@@ -1,0 +1,65 @@
+!!!
+html
+  head
+    title= "Real time web chat"
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.css')
+    link(rel='stylesheet', href='/styles.css')
+    script(src='/client.js')
+    script(src='/fullscreen.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.js')
+    script(src='/three.min.js')
+    script(src='/Detector.js')
+    script(src='/stats.min.js')
+    script(src='/cube.js')
+    //- script(src='/helvetiker_bold.typeface.js')
+    //- script(src='/text.js')
+  body
+    nav(role=navigation).navbar.navbar-default.navbar-fixed-top#sprinkle-navbar
+      .container
+        .navbar-header
+          a(href='#')
+            img(src='//placehold.it/150x40' alt='logo' style='margin-top:5px')
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.navbar-link
+              a(href='#') Link
+            li.navbar-link
+              a(href='http://timeline.knightlab.com/#' target='_blank') timeline.js
+
+    div(data-id=1).page
+      .container(style='margin-top:150px')
+        .row
+          .col-xs-12
+            h1 H!R ME PLOX!
+    div(data-id=1).page
+      .container(style='margin-top:150px')
+        .row
+          .col-xs-12
+            h1 11111111111111111111
+    div(style='height:100px')#cube
+    div(data-id=1).page
+      #webgl-container
+    //- div(data-id=1).page
+      //- #webgl-text
+
+
+
+    script(type="x-shader/x-vertex")#vertexshader.
+      uniform float amplitude;
+      attribute vec3 displacement;
+      attribute vec3 customColor;
+      varying vec3 vColor;
+      void main() {
+        vec3 newPosition = position + amplitude * displacement;
+        vColor = customColor;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+      }
+    script(type="x-shader/x-fragment")#fragmentshader.
+      uniform vec3 color;
+      uniform float opacity;
+      varying vec3 vColor;
+      void main() {
+        gl_FragColor = vec4( vColor * color, opacity );
+      }
