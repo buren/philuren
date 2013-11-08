@@ -1,0 +1,258 @@
+@site_width: 1170px;
+@navbar_color: #1F527E;
+@page_header_margin: 160px;
+
+@navbar_margin: 30px;
+
+@black: #101010;
+@blue: #357ebd;
+@white: #fff;
+
+.navbar-default {
+  border-width: 0;
+  background-color:  @navbar_color;
+  border-color: @navbar_color;
+  margin: 0 auto;
+  .navbar-toggle {
+    margin-top: 22px;
+  }
+}
+
+ul.nav.navbar-nav.navbar-right li {
+  margin-top: 5px !important;
+}
+
+.navbar-default .navbar-toggle {
+  margin-top: 10px;
+}
+
+.row {
+  max-width: @site_width;
+}
+
+ul.nav.navbar-nav.navbar-right {
+  li.active {
+      a {
+        color: @black;
+        background-color: @white;
+      }
+    }
+  li {
+    margin-top: 20px;
+    a {
+      color: @white;
+      font-size: 25px;
+      .caret {
+        font-size: 25px;
+      }
+    }
+  }
+  ul.dropdown-menu {
+    li {
+      margin-top: 0 !important;
+      a {
+        color: @black;
+        font-size: 18px;
+        padding: 10px 30px;
+        &:hover {
+          color: @white;
+          b {
+            color: @white;
+            &:hover {
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-nav>.dropdown>a .caret {
+  border-top-color: @white;
+  border-bottom-color: @white;
+}
+
+.center { text-align: center; }
+
+.bold { font-weight: 700; }
+
+.page-header-container {
+  margin-top: 142px;
+}
+
+.page-header {
+  background: url(/img/nepal.jpg);
+  background-repeat:no-repeat;
+  background-size: 2000px 3001px;
+  height: 3000px !important;
+  border-bottom: none;
+  height: 100%;
+  margin-top: -120px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  .page-header-content {
+    max-width: 750px;
+    color: @black;
+    display: inline-block;
+    margin-top: @page_header_margin;
+    .header-title {
+      font-size: 42px;
+      vertical-align: middle;
+      text-transform: capitalize;
+    }
+    .header-sub-title {
+      font-weight: 200;
+    }
+  }
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  .top-arrow {
+    margin-top: -95px;
+    max-width: 75px;
+  }
+  .section-header-container {
+    margin-bottom: 70px;
+  }
+  .section-header {
+    text-align: center;
+  }
+  .section-partners {}
+  .action-section {
+    margin-top: 40px;
+    .title, .sub-title {
+      text-transform: capitalize;
+    }
+    .title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .sub-title {
+      margin-top: 10px
+    }
+    .action-btn {
+      margin-top: 20px;
+      padding: 18px 50px;
+    }
+  }
+}
+
+img.header-img-logo, .footer-img-logo {
+  max-width: 90px;
+  margin: -4px 0;
+}
+
+ul.nav.navbar-nav.navbar-right li a {
+  font-size: 18px;
+  margin-top: -2px;
+}
+
+
+/* FOOTER */
+.footer {
+  color: @white;
+  padding-bottom: 40px;
+  .footer-col-header {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  a.page-link-footer {
+    font-size: 22px;
+    color: @white;
+    display: block;
+    margin: 10px 0;
+  }
+  .footer-links {
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+      img {
+        margin-right: 10px;
+        max-width: 25px;
+      }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) xs */
+@media (max-width: 480px) {
+  .page-header {
+    .page-header-content {
+      margin-top: 80px;
+      .header-title {
+        font-size: 38px;
+      }
+      .header-sub-title {}
+    }
+  }
+
+  .footer {
+    .social-links {
+      img {
+        max-width:  25px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 766px){
+  .navbar-header {
+    background-color: @blue;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: @navbar_margin; // needs to be the sam as
+  }
+  .page-header {
+    margin-top: -142px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up)  md */
+@media (min-width: 992px) { }
+
+/* Large devices (large desktops, 1200px and up)  lg */
+@media (min-width: 1200px) { }
+
+
+
+
+// Hackathon styling
+.page {}
+
+.hackathon-header {}
+.hackathon-tilde {}
+
+.profile {
+  display: inline-block;
+  p {
+    margin-top: 15px;
+    display: inline-block;
+  }
+}
+
+.profile-image {
+}
+
+/* Overrides Timeline.js styling */
+img.lang-logo {
+  max-width: 100px !important;
+  display: inline-block !important;
+}
+.trialbee, .transputec, .lth {
+  img.media-image {
+    border: none !important;
+  }
+}

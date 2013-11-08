@@ -1,5 +1,6 @@
 var express = require("express");
-var less = require('less');
+var lessMiddleware = require('less-middleware');
+
 
 var app = express();
 
@@ -15,6 +16,12 @@ var WebSocketServer = require('ws').Server
 app.set('views', __dirname + '/views');
 app.set('view engine', "jade");
 app.engine('jade', require('jade').__express);
+
+app.use(lessMiddleware({
+   src: __dirname + '/public',
+   compress: true,
+   force: true
+}));
 
 app.use(express.static(__dirname + '/public'));
 

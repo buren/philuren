@@ -1,7 +1,7 @@
 !!!
 html
   head
-    title= "Real time web chat"
+    title= "Philuren Ltd."
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.css')
     link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/styles.css')
@@ -18,36 +18,52 @@ html
     script(src='/js/timeline-min.js')
     script(src='/storyjs-embed.js')
     script(src='/philuren-timeline.js')
+    script(src='/js/navbar.js')
     //- script(src='/helvetiker_bold.typeface.js')
     //- script(src='/text.js')
   body
-    nav(role=navigation).navbar.navbar-default.navbar-fixed-top#sprinkle-navbar
+    nav(role=navigation).navbar.navbar-default.navbar-fixed-top#hackathon-navbar
       .container
         .navbar-header
           a(href='#')
-            img(src='//placehold.it/150x40' alt='logo' style='margin-top:5px')
+            img(src='//placehold.it/150x42' alt='logo' style='margin-top:5px')
         .collapse.navbar-collapse.navbar-ex1-collapse
           ul.nav.navbar-nav.navbar-right
             li.navbar-link
-              a(href='#') Link
+              a(href='#about') About
             li.navbar-link
-              a(href='https://github.com/NUKnightLab/TimelineJS' target='_blank') timeline.js
+              a(href='#timeline') Timeline
+            li.navbar-link
+              a(href='#simple-hack') Simple hack
+            li.navbar-link
+              a(href='#hire-us') H!re us
 
-    div(data-id=1).page
-      .container(style='margin-top:150px')
+    .page.page-header#about
+      .container.page-header-container
         .row
-          .col-xs-12
-            #philuren-timeline
-
-    div(data-id=1).page
-      .container(style='margin-top:150px')
-        .row
-          .col-xs-12
-            h1 11111111111111111111
-    div(style='height:100px')#cube
-    div(data-id=1).page
+          .col-xs-12.page-header-content
+            h1.hackathon-header Philuren
+            h5.hackathon-tilde ~~~~~~~~
+            .profile(style='margin-right: 100px;')
+              img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
+              br
+              p phifflarn
+            .profile
+              img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
+              br
+              p buren
+    .page.section#timeline
+      #philuren-timeline
+    .page#simple-hack
       #webgl-container
-    //- div(data-id=1).page
+    #quote
+      .container
+        .row
+          .col-xs-12
+            p.
+              Governments and corporations need people like you and me. We are Samurai... the Keyboard Cowboys... and all those other people who have no idea what's going on are the cattle... Moooo.
+
+      //- .page
       //- #webgl-text
 
     script(type="x-shader/x-vertex")#vertexshader.

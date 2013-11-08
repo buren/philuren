@@ -1,75 +1,130 @@
 var initTimeline = function () {
-  var dataObject = {
+  var timelineContent = {
     "timeline":
     {
       "headline":"Philuren: <br> Coffe drinkers, software tinkers",
       "type":"default",
-      "text":"<p>It all started with Java</p><p><pre>public static void main(String[] args() {<br>&nbsp;&nbsp;System.out.println(\"Hello world!\");<br>}</pre></p><p>but not end there:</p> <p><pre>hackaton_participants.each do |p| <br>&nbsp;&nbsp; puts \"Hi #{p.name}\"<br>end</pre></p>",
+      "text":"<p></p>",
       "asset": {
-        "media":"/img/320x160.gif",
+        "media":"http://sprinkle.se",
         "credit":"On port 22, not so far away",
         "caption":"Open source tech"
     },
     "date": [
-        {
-        "startDate":"2009,09,01",
-        "endDate":"2009,10,20",
-        "headline":"Per Holm's Java",
-        "text":"<p>Turtle t = new Turtle()</p> <p><strong>just wasn't enough</strong></p><br />",
-        "tag":"Java",
-        "classname":"optionaluniqueclassnamecanbeaddedhere",
+      {
+        "startDate":"2013,01,30",
+        "endDate":"2013,10,25",
+        "headline":"Camera Based Gesture Detection For Android Devices",
+        "text":"<p>Description</p>",
+        "tag":"phifflarn",
+        "classname":"thesis",
         "asset": {
-          "media":"/img/java.jpg",
-          "credit":"Novice",
+          "media":"/img/sony.jpg",
+          "credit":"",
           "caption":""
         }
       },
       {
-      "startDate":"2011,01,01",
-      "endDate":"2011,10,20",
-      "headline":"Lang revolution",
-      "text":"<p>Turtle t = new Turtle()</p> <p><strong>just wasn't enough</strong></p><br /><img class=\"lang-logo\" src=\"/img/android.png\" alt=\"android\"><img class=\"lang-logo\" src=\"/img/aws.jpg\" alt=\"aws\"><img class=\"lang-logo\" src=\"/img/opencv.png\" alt=\"opencv\"><img class=\"lang-logo\" src=\"/img/php.jpeg\" alt=\"php\"><img class=\"lang-logo\" src=\"/img/ruby.png\" alt=\"ruby\"><img class=\"lang-logo\" src=\"/img/rails.png\" alt=\"rails\">",
-      "tag":"Coffee drinker",
-      "classname":"optionaluniqueclassnamecanbeaddedhere",
-    },
-    {
-      "startDate":"2012,01,01",
-      "endDate":"2012,10,20",
-      "headline":"Hacker station",
-      "text":"",
-      "tag":"Coffee consumer",
-      "classname":"optionaluniqueclassnamecanbeaddedhere",
-    },
-    {
-      "startDate":"2013,09,01",
-      "endDate":"2013,10,20",
-      "headline":"Coding music",
-      "text":"<p>Sets",
-      "tag":"",
-      "classname":"optionaluniqueclassnamecanbeaddedhere",
-      "asset": {
-        "media":"https://soundcloud.com/robot-heart/dj-tennis-robot-heart-burning-man-2013",
-        "credit":"soundcloud",
-        "caption":""
-      }
-    }
-    ],
-    "era": [
+        "startDate":"2013,05,30",
+        "endDate":"2013,09,23",
+        "headline":"Technical Editor for Android Pushing the Limits by Erik Hellman",
+        "text":"<p>Awesome</p>",
+        "tag":"phifflarn",
+        "classname":"editor",
+        "asset": {
+          "media":"/img/sony.jpg",
+          "credit":"",
+          "caption":""
+        }
+      },
       {
-        "startDate":"2009,12,10",
-        "endDate":"2013,11,07",
-        "headline":"Birth of Phifflarn & Buren",
-        "text":"<p>Body text goes here, some HTML is OK</p>",
-        "tag":"This is Optional"
+        "startDate":"2011,03,03",
+        "endDate":"2011,05,23",
+        "headline":"Edith",
+        "text":"<p>Wrote iOS portable Web Development app</p>",
+        "tag":"phifflarn",
+        "classname":"edith",
+        "asset": {
+          "media":"/img/sony.jpg",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
+        "startDate":"2012,11,05",
+        "endDate":"2013,01,01",
+        "headline":"Full stack engineer Trialbee",
+        "text":"<p>Web Developer <br /> Ruby on Rails <br />MySQL <br /> HTML5, CSS, JavaScript</p>",
+        "tag":"buren",
+        "classname":"trialbee",
+        "asset": {
+          "media":"/img/trialbee_page.png",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
+        "startDate":"2013,06,03",
+        "endDate":"2013,08,10",
+        "headline":"Custom WYSIWYG CMS for Sprinkle",
+        "text":"<p>Written with Ruby on Rails</p>",
+        "tag":"buren",
+        "classname":"sprinkle",
+        "asset": {
+          "media":"/img/sprinkle_wysiwyg.png",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
+        "startDate":"2011,06,03",
+        "endDate":"2011,08,03",
+        "headline":"Transputec Plc.",
+        "text":"<p>Cross platform HTML5 app development.</p>",
+        "tag":"buren",
+        "classname":"transputec",
+        "asset": {
+          "media":"/img/transputec.png",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
+        "startDate":"2008,08,30",
+        "endDate":"2014,01,30",
+        "headline":"LTH MSC, Technical Physics",
+        "text":"<p></p>",
+        "tag":"phifflarn",
+        "classname":"lth",
+        "asset": {
+          "media":"/img/lth.jpg",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
+        "startDate":"2009,08,30",
+        "endDate":"2015,06,01",
+        "headline":"LTH MSC, Software Engineering",
+        "text":"<p></p>",
+        "tag":"buren",
+        "classname":"lth",
+        "asset": {
+          "media":"/img/lth.jpg",
+          "credit":"",
+          "caption":""
+        }
       }
-      ]
+    ]
     }
   }
+
   createStoryJS({
     type:       'timeline',
-    width:      '1150',
     height:     '600',
-    source:     dataObject,
+    start_at_end: true,
+    source:     timelineContent,
     embed_id:   'philuren-timeline'
   });
+
 }

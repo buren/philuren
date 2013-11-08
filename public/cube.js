@@ -207,11 +207,11 @@ var initCube = function () {
     container.appendChild( renderer.domElement );
 
     //
-
-    stats = new Stats();
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.top = '0px';
-    container.appendChild( stats.domElement );
+    // Uncomment if stats are wanted
+    // stats = new Stats();
+    // stats.domElement.style.position = 'absolute';
+    // stats.domElement.style.top = '54px';
+    // container.appendChild( stats.domElement );
 
     //
 
