@@ -3,6 +3,7 @@ html
   head
     title= "Real time web chat"
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/styles.css')
     script(src='/client.js')
     script(src='/fullscreen.js')
@@ -13,6 +14,10 @@ html
     script(src='/Detector.js')
     script(src='/stats.min.js')
     script(src='/cube.js')
+    script(src='/en.js')
+    script(src='/js/timeline-min.js')
+    script(src='/storyjs-embed.js')
+    script(src='/philuren-timeline.js')
     //- script(src='/helvetiker_bold.typeface.js')
     //- script(src='/text.js')
   body
@@ -26,13 +31,14 @@ html
             li.navbar-link
               a(href='#') Link
             li.navbar-link
-              a(href='http://timeline.knightlab.com/#' target='_blank') timeline.js
+              a(href='https://github.com/NUKnightLab/TimelineJS' target='_blank') timeline.js
 
     div(data-id=1).page
       .container(style='margin-top:150px')
         .row
           .col-xs-12
-            h1 H!R ME PLOX!
+            #philuren-timeline
+
     div(data-id=1).page
       .container(style='margin-top:150px')
         .row
@@ -43,8 +49,6 @@ html
       #webgl-container
     //- div(data-id=1).page
       //- #webgl-text
-
-
 
     script(type="x-shader/x-vertex")#vertexshader.
       uniform float amplitude;

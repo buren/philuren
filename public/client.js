@@ -5,6 +5,7 @@ window.onload = function() {
   }
 
   fullscreenPages();
+  initTimeline();
 
   cubeInitialized = false;
   $('#cube').waypoint(function() {

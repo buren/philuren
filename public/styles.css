@@ -1,1 +1,7 @@
 .page {}
+
+/* Overrides Timeline.js styling */
+img.lang-logo {
+  max-width: 100px !important;
+  display: inline-block !important;
+}
