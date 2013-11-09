@@ -1,5 +1,5 @@
 @site_width: 1170px;
-@navbar_color: #1F527E;
+@navbar_color: rgba(255, 255, 255, 0.8);
 @page_header_margin: 160px;
 
 @navbar_margin: 30px;
@@ -9,8 +9,18 @@
 @white: #fff;
 @grey: #e7e7e7;
 
+@transparent_white: rgba(255, 255, 255, 0.8);
+
+// @media all and (max-width:900px), (max-device-width:900px){
+//   .page-header{
+//     background-image: url('/img/nepal-smaller.png')!important;
+//     background-size: 500px, 1000px;
+//   }
+// }
+
 .navbar-default {
   border-width: 0;
+  background: #ffffff;
   background-color:  @navbar_color;
   border-color: @navbar_color;
   margin: 0 auto;
@@ -94,7 +104,7 @@ ul.nav.navbar-nav.navbar-right {
   background: url(/img/nepal.jpg);
   background-repeat:no-repeat;
   background-position: top;
-  background-size: 2000px 3001px;
+  // background-size: 2000px 3001px;
   border-bottom: none;
   height: 100%;
   margin-top: -120px;
@@ -214,8 +224,28 @@ ul.nav.navbar-nav.navbar-right li a {
 }
 
 @media (max-width: 766px){
-  .navbar-header {
-    background-color: @blue;
+  body{
+    margin:0;
+    padding: 0;
+  }
+  .logo{
+    margin-left: 5px;
+  }
+  .profile img{
+    width: 50px;
+    height: 50px;
+    display: none;
+  }
+  .profile-name{
+    display: none;
+  }
+  .page-header{
+    margin-top: -145px;
+    background-image: url('/img/nepal-smaller.png')!important;
+    background-size: 600px 1200px;
+    margin-right: -20px;
+    padding-bottom: 80px;
+
   }
 }
 
