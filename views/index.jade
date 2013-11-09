@@ -28,24 +28,23 @@ html
     //- script(src='/text.js')
   body
     nav(role=navigation).navbar.navbar-default.navbar-fixed-top#hackathon-navbar
-      .container
-        .navbar-header
-          a(href='#')
-            img(src='/img/logo.png' alt='logo' class='logo')
-          button(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse').navbar-toggle
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        .collapse.navbar-collapse.navbar-ex1-collapse
-          ul.nav.navbar-nav.navbar-right
-            li.navbar-link
-              a(href='#about') Who we are
-            li.navbar-link
-              a(href='#timeline') What we've done
-            li.navbar-link
-              a(href='#simple-hack') We Hack
-            li.navbar-link
-              a(href='#hire-us') H!re us
+      .navbar-header
+        a(href='#')
+          img(src='/img/logo.png' alt='logo' class='logo')
+        button(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse').navbar-toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        ul.nav.navbar-nav.navbar-right
+          li.navbar-link
+            a(href='#about') Who we are
+          li.navbar-link
+            a(href='#timeline') What we've done
+          li.navbar-link
+            a(href='#simple-hack') What we can do
+          li.navbar-link
+            a(href='#hire-us') H!re us
 
     .page.page-header#about
       .container.page-header-container

@@ -2,8 +2,8 @@
 ul.nav.navbar-nav.navbar-right li{margin-top:5px !important}
 .navbar-default .navbar-toggle{margin-top:10px}
 .row{max-width:1170px}
-.logo{width:50px;height:50px}
-ul.nav.navbar-nav.navbar-right li.active a{color:#fff;background-color:#101010}
+.logo{width:50px;height:50px;margin-left:30px}
+ul.nav.navbar-nav.navbar-right{margin-right:30px !important}ul.nav.navbar-nav.navbar-right li.active a{color:#fff;background-color:#101010}
 ul.nav.navbar-nav.navbar-right li{margin-top:20px}ul.nav.navbar-nav.navbar-right li a{color:#101010;font-size:14px;font-weight:800}ul.nav.navbar-nav.navbar-right li a .caret{font-size:14px}
 ul.nav.navbar-nav.navbar-right ul.dropdown-menu li{margin-top:0 !important}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a{color:#fff;font-size:14px;padding:10px 30px}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover{color:#fff}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover b{color:#fff}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover b:hover{color:#fff}
 .navbar-default .navbar-nav>.dropdown>a .caret{border-top-color:#fff;border-bottom-color:#fff}
