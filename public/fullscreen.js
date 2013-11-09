@@ -8,6 +8,6 @@ var fullscreenPages = function () {
   });
 
   function resizeWrappers() {
-    $('.page').css(cssAttribute, $(window).height());
+    $('.cube-page').css(cssAttribute, $(window).height());
   }
 }

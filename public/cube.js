@@ -6,6 +6,7 @@ var initCube = function () {
 
 
   if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
   var canvasBackgroundColor = 0xffffff;
 
   var container, stats;
@@ -198,7 +199,7 @@ var initCube = function () {
     renderer.setClearColor( canvasBackgroundColor, 1 );
 
 
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( window.innerWidth -20, window.innerHeight );
 
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
@@ -215,7 +216,7 @@ var initCube = function () {
 
     //
 
-    window.addEventListener( 'resize', onWindowResize, false );
+    window.addEventListener( 'resize', onWindowResize, true );
 
   }
 
@@ -235,7 +236,7 @@ var initCube = function () {
     requestAnimationFrame( animate );
 
     render();
-    stats.update();
+    // stats.update();
 
   }
 

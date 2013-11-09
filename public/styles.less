@@ -7,6 +7,7 @@
 @black: #101010;
 @blue: #357ebd;
 @white: #fff;
+@grey: #e7e7e7;
 
 .navbar-default {
   border-width: 0;
@@ -243,8 +244,28 @@ ul.nav.navbar-nav.navbar-right li a {
   }
 }
 
-.profile-image {
+.profile-image {}
+
+.profile-intro-section {
+  margin: 240px 0;
+  color: @white;
+  .profile-intro:first-child {
+    margin-top: 0;
+  }
+  .profile-intro {
+    margin-top: 400px;
+    .profile-intro-text-container {
+      padding-top: 15px;
+      border-radius: 5px;
+      color: @black;
+      margin: 0 auto;
+      background-color: @grey;
+      max-width: 400px;
+      min-height: 400px;
+    }
+  }
 }
+
 
 /* Overrides Timeline.js styling */
 img.lang-logo {

@@ -2,10 +2,10 @@
 html
   head
     title= "Philuren Ltd."
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.css')
     link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/styles.css')
-    script(src='/client.js')
     script(src='/fullscreen.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')
@@ -19,6 +19,8 @@ html
     script(src='/storyjs-embed.js')
     script(src='/philuren-timeline.js')
     script(src='/js/navbar.js')
+    script(src='/js/wink.js')
+    script(src='/client.js')
     //- script(src='/helvetiker_bold.typeface.js')
     //- script(src='/text.js')
   body
@@ -26,7 +28,11 @@ html
       .container
         .navbar-header
           a(href='#')
-            img(src='//placehold.it/150x42' alt='logo' style='margin-top:5px')
+            //- img(src='//placehold.it/150x42' alt='logo' style='margin-top:5px')
+          button(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse').navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
         .collapse.navbar-collapse.navbar-ex1-collapse
           ul.nav.navbar-nav.navbar-right
             li.navbar-link
@@ -52,10 +58,38 @@ html
               img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
               br
               p buren
+
+
+        .section.profile-intro-section
+          .row
+            .col-xs-12.col-sm-6.profile-intro
+              .profile
+                img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
+                br
+                p phifflarn
+              .profile-intro-text-container
+                p An awesome introtext describing this fucker
+            .col-xs-12.col-sm-6.profile-intro
+              .profile
+                img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
+                br
+                p buren
+              .profile-intro-text-container
+                p An awesome introtext describing this fucker
+
+
     .page.section#timeline
       #philuren-timeline
-    .page#simple-hack
+
+    .cube-page.section#simple-hack
       #webgl-container
+
+    .section#hire-us
+      .container
+        .row
+          .col-xs-12
+            p.center
+              a.btn.btn-lg.btn-primary philuren.hire.now!()
     #quote
       .container
         .row

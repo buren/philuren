@@ -26,5 +26,7 @@ ul.nav.navbar-nav.navbar-right li a{font-size:18px;margin-top:-2px}
 .footer .footer-links a img{margin-right:10px;max-width:25px}
 @media (max-width:480px){.page-header .page-header-content{margin-top:80px}.page-header .page-header-content .header-title{font-size:38px} .footer .social-links img{max-width:25px}}@media (max-width:766px){.navbar-header{background-color:#357ebd}}@media (min-width:768px){.navbar-default{background-color:transparent;border-color:transparent;margin-top:30px} .page-header{margin-top:-142px}}@media (min-width:992px){}@media (min-width:1200px){}
 .profile{display:inline-block}.profile p{margin-top:15px;display:inline-block}
+.profile-intro-section{margin:240px 0;color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
+.profile-intro-section .profile-intro{margin-top:400px}.profile-intro-section .profile-intro .profile-intro-text-container{padding-top:15px;border-radius:5px;color:#101010;margin:0 auto;background-color:#e7e7e7;max-width:400px;min-height:400px}
 img.lang-logo{max-width:100px !important;display:inline-block !important}
 .trialbee img.media-image,.transputec img.media-image,.lth img.media-image{border:none !important}
