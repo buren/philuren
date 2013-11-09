@@ -31,20 +31,27 @@ ul.nav.navbar-nav.navbar-right li {
   max-width: @site_width;
 }
 
+.logo{
+    width: 50px;
+    height: 50px;
+  }
+
 ul.nav.navbar-nav.navbar-right {
+
   li.active {
       a {
-        color: @black;
-        background-color: @white;
+        color: @white;
+        background-color: @black;
       }
     }
   li {
     margin-top: 20px;
     a {
-      color: @white;
-      font-size: 25px;
+      color: @black;
+      font-size: 14px;
+      font-weight: 800;
       .caret {
-        font-size: 25px;
+        font-size: 14px;
       }
     }
   }
@@ -52,8 +59,8 @@ ul.nav.navbar-nav.navbar-right {
     li {
       margin-top: 0 !important;
       a {
-        color: @black;
-        font-size: 18px;
+        color: @white;
+        font-size: 14px;
         padding: 10px 30px;
         &:hover {
           color: @white;
@@ -85,8 +92,8 @@ ul.nav.navbar-nav.navbar-right {
 .page-header {
   background: url(/img/nepal.jpg);
   background-repeat:no-repeat;
+  background-position: top;
   background-size: 2000px 3001px;
-  height: 3000px !important;
   border-bottom: none;
   height: 100%;
   margin-top: -120px;
@@ -149,6 +156,7 @@ img.header-img-logo, .footer-img-logo {
 
 ul.nav.navbar-nav.navbar-right li a {
   font-size: 18px;
+  font-family: 'sequilight';
   margin-top: -2px;
 }
 
@@ -233,13 +241,20 @@ ul.nav.navbar-nav.navbar-right li a {
 // Hackathon styling
 .page {}
 
-.hackathon-header, .hackathon-tilde{
+.hackathon-header, .hackathon-tilde, .hackathon-slogan{
   font-family: 'sequilight';
-  font-size: 48px;
+}
+.hackathon-header{
+  font-size: 72px;
 }
 
 .hackathon-tilde{
-  font-size: 32px;
+  font-size: 48px;
+}
+
+.hackathon-slogan{
+  font-size: 18px;
+  margin-bottom: 80px;
 }
 
 .profile {
@@ -250,7 +265,15 @@ ul.nav.navbar-nav.navbar-right li a {
   }
 }
 
-.profile-image {}
+.profile-name{
+  font-family: 'sequilight';
+  font-size: 18px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+}
 
 .profile-intro-section {
   margin: 240px 0;

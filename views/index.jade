@@ -31,7 +31,7 @@ html
       .container
         .navbar-header
           a(href='#')
-            //- img(src='//placehold.it/150x42' alt='logo' style='margin-top:5px')
+            img(src='/img/logo.png' alt='logo' class='logo')
           button(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse').navbar-toggle
             span.icon-bar
             span.icon-bar
@@ -39,11 +39,11 @@ html
         .collapse.navbar-collapse.navbar-ex1-collapse
           ul.nav.navbar-nav.navbar-right
             li.navbar-link
-              a(href='#about') About
+              a(href='#about') Who we are
             li.navbar-link
-              a(href='#timeline') Timeline
+              a(href='#timeline') What we've done
             li.navbar-link
-              a(href='#simple-hack') Simple hack
+              a(href='#simple-hack') We Hack
             li.navbar-link
               a(href='#hire-us') H!re us
 
@@ -53,32 +53,33 @@ html
           .col-xs-12.page-header-content
             h1.hackathon-header Philuren
             h5.hackathon-tilde ~~~~~~~~
-            .profile(style='margin-right: 100px;')
+            h2.hackathon-slogan Coffee drinkers, Software tinkers
+            .profile(style='margin-right: 60px;')
               img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
               br
-              p phifflarn
+              h1.profile-name phifflarn
             .profile
               img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
               br
-              p buren
+              h1.profile-name buren
 
 
-        .section.profile-intro-section
-          .row
-            .col-xs-12.col-sm-6.profile-intro
-              .profile
-                img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
-                br
-                p phifflarn
-              .profile-intro-text-container
-                p An awesome introtext describing this fucker
-            .col-xs-12.col-sm-6.profile-intro
-              .profile
-                img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
-                br
-                p buren
-              .profile-intro-text-container
-                p An awesome introtext describing this fucker
+    .section.profile-intro-section
+      .row
+        .col-xs-12.col-sm-6.profile-intro
+          .profile
+            img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
+            br
+            p phifflarn
+          .profile-intro-text-container
+            p An awesome introtext describing this fucker
+        .col-xs-12.col-sm-6.profile-intro
+          .profile
+            img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
+            br
+            p buren
+          .profile-intro-text-container
+            p An awesome introtext describing this fucker
 
 
     .page.section#timeline

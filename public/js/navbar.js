@@ -4,7 +4,7 @@ $(document).on('scroll', function() {
 
   if (_mobile === true) {
     if (_stop_scroll_poll === false){
-      var color = 'rgba(10, 10, 10, 1)';
+      var color = 'rgba(255, 255, 255, 1)';
       $('#hackathon-navbar').css('background-color', color);
     }
     _stop_scroll_poll = true;
@@ -28,7 +28,7 @@ $(document).on('scroll', function() {
   }else if (opacity < 0.1){
     opacity = 0;
   }
-  var color = 'rgba(10, 10, 10, ' + opacity + ')';
+  var color = 'rgba(255, 255, 255, ' + opacity + ')';
   $('#hackathon-navbar').css('background-color', color);
 
 });
