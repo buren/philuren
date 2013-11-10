@@ -15,6 +15,7 @@ html
     script(src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='/js/jquery.tagcloud.js')
     script(src='/three.min.js')
     script(src='/Detector.js')
     script(src='/stats.min.js')
@@ -54,8 +55,8 @@ html
         .row
           .col-xs-12.page-header-content
             h1.hackathon-header Philuren
-            h5.hackathon-tilde ~~~~~~~~
-            h2.hackathon-slogan#particle-animation-trigger Coffee drinkers, Software tinkers
+            h5.hackathon-tilde#particle-animation-trigger ~~~~~~~~
+            h2.hackathon-slogan Coffee drinkers, Software tinkers
             .profile(style='margin-right: 60px;')
               img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
               br
@@ -318,6 +319,16 @@ html
             .profile
               img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
             p An awesome introtext describing this fucker
+            .lang-cloud
+              a(href='#' rel='30') Android
+              a(href='#' rel='28') Java
+              a(href='#' rel='12') Python
+              a(href='#' rel='15') OpenCV
+              br
+              a(href='#' rel='10') HTML5
+              a(href='#' rel='8') App Engine
+              a(href='#' rel='7') Bash
+              a(href='#' rel='9') AppleScript
         .col-xs-12.col-sm-6.profile-intro
           .profile
             img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
@@ -325,6 +336,17 @@ html
             p.profile-intro-name buren
           .profile-intro-text-container
             p An awesome introtext describing this fucker
+            .lang-cloud
+              a(href='#' rel='12') Ruby
+              a(href='#' rel='22') Rails
+              a(href='#' rel='10') Java
+              a(href='#' rel='7') JavaScript
+              a(href='#' rel='5') CSS
+              br
+              a(href='#' rel='10') HTML5
+              a(href='#' rel='8') AWS
+              a(href='#' rel='9') Bash
+
 
 
     .page.section#timeline
