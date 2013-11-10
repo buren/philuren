@@ -127,15 +127,15 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 .page-header {
-  background: url(/img/nepal.jpg);
+  background: url('/img/nepal.jpg');
   background-repeat:no-repeat;
   background-position: top;
   // background-size: 2000px 3001px;
   border-bottom: none;
   height: 100%;
-  margin-top: -120px;
+  margin-top: -142px;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 142px;
   text-align: center;
   .page-header-content {
     max-width: 750px;
@@ -151,6 +151,19 @@ ul.nav.navbar-nav.navbar-right {
       font-weight: 200;
     }
   }
+}
+
+.page-about{
+  background: @dark_grey;
+  background-image: url('/img/noise.png');
+  background-repeat: repeat;
+
+  .break-line{
+    position: relative;
+    background: #fff;
+    bottom: 2px;
+  }
+
 }
 
 .section {
@@ -269,11 +282,11 @@ ul.nav.navbar-nav.navbar-right li a {
     display: none;
   }
   .page-header{
-    margin-top: -145px;
+    // margin-top: -145px;
     background-image: url('/img/nepal-smaller.png')!important;
     background-size: 600px 1200px;
     margin-right: -20px;
-    padding-bottom: 145px;
+    // padding-bottom: 145px;
   }
 }
 
@@ -284,7 +297,7 @@ ul.nav.navbar-nav.navbar-right li a {
     margin-top: @navbar_margin; // needs to be the sam as
   }
   .page-header {
-    margin-top: -142px;
+    // margin-top: -142px;
   }
 }
 
@@ -293,9 +306,9 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
   .page-header{
     background-image: url('/img/nepal-smaller.png')!important;
-    padding-bottom: 140px !important;
-    margin-right: -20px;
-    margin-left: -20px;
+    // padding-bottom: 140px !important;
+    // margin-right: -20px;
+    // margin-left: -20px;
   }
 }
 
@@ -340,11 +353,7 @@ p.citation{
   margin-bottom: 80px;
 }
 
-.page-about{
-  background: @dark_grey;
-  background-image: url('/img/noise.png');
-  background-repeat: repeat;
-}
+
 
 .profile-intro-section{
   .row{
@@ -379,7 +388,7 @@ p.citation{
     margin-top: 0;
   }
   .profile-intro {
-    margin-top: 400px;
+    // margin-top: 400px;
     .profile-intro-text-container {
       padding-top: 15px;
       border-radius: 5px;
