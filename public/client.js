@@ -1,8 +1,8 @@
 window.onload = function() {
-  var ws = new WebSocket('ws://10.0.1.4:3702');
-	ws.onmessage = function (event) {
-    console.log(event.data);
-  }
+
+  cubeInitialized = false;
+
+
 
   fullscreenPages();
   initTimeline();
@@ -41,9 +41,36 @@ window.onload = function() {
 
 
 
-  cubeInitialized = false;
+
+
+
+  var hideDialog = function(){
+    $('.app-dialog').fadeOut(300);
+  }
+
+  var showDialog = function(){
+    $('.app-dialog').fadeIn(300);
+  }
+
   $('#simple-hack').waypoint(function() {
-    initCube();
+    // initCube();
+    //showDialog();
   });
+
+  var ws = new WebSocket('ws://10.0.1.4:3702');
+  ws.onmessage = function (event) {
+    // console.log(event.data);
+    var data = event.data;
+    console.log(data);
+    if(data == 'Phone connected'){
+      console.log('should init cube');
+      hideDialog();
+      initCube();
+    }else if(data == 'Phone disconnected'){
+      console.log('should tear down cube');
+      destroyCube();
+      showDialog();
+    }
+  }
 
 }
