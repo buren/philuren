@@ -33,7 +33,7 @@ html
   body
     nav(role=navigation).navbar.navbar-default.navbar-fixed-top#hackathon-navbar
       .navbar-header
-        a(href='#')
+        a(href='#about').anchor-link
           img(src='/img/logo.png' alt='logo' class='logo')
         button(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse').navbar-toggle
           span.icon-bar
@@ -42,7 +42,9 @@ html
       .collapse.navbar-collapse.navbar-ex1-collapse
         ul.nav.navbar-nav.navbar-right
           li.navbar-link
-            a(href='#about').anchor-link Who we are
+            a(href='#about').anchor-link Intro
+          li.navbar-link
+            a(href='#who-we-are').anchor-link Who we are
           li.navbar-link
             a(href='#timeline').anchor-link What we've done
           li.navbar-link
@@ -65,9 +67,69 @@ html
               img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
               br
               h1.profile-name buren
+            p.quote
+              | "We are Samurai... the Keyboard Cowboys...
+              br
+              | and all those other people who have no
+              br
+              | idea what's going on are the cattle...
+              br
+              | Moooo."
+            p.citation - The Plague, "Hackers" 1995
+      .break-line
+      a(href='#who-we-are').anchor-link.down-button
+        img(src='/img/down2.png')
 
-    .container.section
-      .particles-content-container
+    .page.page-about#who-we-are
+      .container.section
+
+      .container.section.profile-intro-section
+        .row
+          .col-xs-12.col-sm-6.profile-intro
+            .profile-intro-text-container
+              .profile
+                img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
+              p An awesome introtext describing this fucker
+              .lang-cloud
+                a(href='#' rel='30') Android
+                a(href='#' rel='28') Java
+                a(href='#' rel='12') Python
+                a(href='#' rel='15') OpenCV
+                br
+                a(href='#' rel='10') HTML5
+                a(href='#' rel='8') App Engine
+                a(href='#' rel='7') Bash
+                a(href='#' rel='9') AppleScript
+                br
+                a(href='#' rel='7') JavaScript
+          .col-xs-12.col-sm-6.profile-intro
+            .profile
+              img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
+              br
+              p.profile-intro-name buren
+            .profile-intro-text-container
+              p An awesome introtext describing this fucker
+              .lang-cloud
+                a(href='#' rel='12') Ruby
+                a(href='#' rel='22') Rails
+                a(href='#' rel='10') Java
+                a(href='#' rel='7') JavaScript
+                a(href='#' rel='5') CSS
+                br
+                a(href='#' rel='10') HTML5
+                a(href='#' rel='8') AWS
+                a(href='#' rel='9') Bash
+
+
+
+    .page.section#timeline
+      #philuren-timeline
+
+    .page.cube-page.section#simple-hack
+      #webgl-container
+
+    .page.page-hire.section#hire-us
+      .page.particles-content-container
         .particles
           .row-1
             i
@@ -309,55 +371,6 @@ html
             i
             i
             i
-
-
-
-    .container.section.profile-intro-section
-      .row
-        .col-xs-12.col-sm-6.profile-intro
-          .profile-intro-text-container
-            .profile
-              img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
-            p An awesome introtext describing this fucker
-            .lang-cloud
-              a(href='#' rel='30') Android
-              a(href='#' rel='28') Java
-              a(href='#' rel='12') Python
-              a(href='#' rel='15') OpenCV
-              br
-              a(href='#' rel='10') HTML5
-              a(href='#' rel='8') App Engine
-              a(href='#' rel='7') Bash
-              a(href='#' rel='9') AppleScript
-              br
-              a(href='#' rel='7') JavaScript
-        .col-xs-12.col-sm-6.profile-intro
-          .profile
-            img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
-            br
-            p.profile-intro-name buren
-          .profile-intro-text-container
-            p An awesome introtext describing this fucker
-            .lang-cloud
-              a(href='#' rel='12') Ruby
-              a(href='#' rel='22') Rails
-              a(href='#' rel='10') Java
-              a(href='#' rel='7') JavaScript
-              a(href='#' rel='5') CSS
-              br
-              a(href='#' rel='10') HTML5
-              a(href='#' rel='8') AWS
-              a(href='#' rel='9') Bash
-
-
-
-    .page.section#timeline
-      #philuren-timeline
-
-    .page.cube-page.section#simple-hack
-      #webgl-container
-
-    .section#hire-us
       .container
         .row
           .col-xs-12

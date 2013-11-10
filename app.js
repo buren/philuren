@@ -47,10 +47,12 @@ var phoneSocketServer = new WebSocketServer({port: phonePort});
 phoneSocketServer.on('connection', function(webSocket) {
     webSocket.on('message', function(message) {
         console.log('phone: %s', message);
-        clientSocket.send(message);
+        if(clientSocket !== null && clientSocket !== undefined)
+          clientSocket.send(message);
     });
     webSocket.send('Connection accepted');
-    clientSocket.send('Phone connected');
+    if(clientSocket !== null && clientSocket !== undefined)
+      clientSocket.send('Phone connected');
 });
 
 
