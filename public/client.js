@@ -26,7 +26,7 @@ window.onload = function() {
   });
 
   $(window).keydown(function(e){
-    console.log(e.keyCode());
+    console.log(e.keyCode);
   });
 
   cubeInitialized = false;
