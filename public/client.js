@@ -38,4 +38,10 @@ window.onload = function() {
     initCube();
   });
 
+  $('#hire').mouseover(function () {
+    $(this).addClass('animated tada');
+  }).mouseout(function() {
+    $(this).removeClass('animated tada');
+  });
+
 }
