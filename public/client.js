@@ -5,8 +5,11 @@ window.onload = function() {
   }
 
   fullscreenPages();
+
   initTimeline();
   initWink();
+  initTagCloud();
+  initParticleAnimation();
 
   $('a.anchor-link').click(function(e){
     e.preventDefault();
@@ -16,30 +19,15 @@ window.onload = function() {
     return false;
   });
 
-
-  particlesAnimated = false;
-  $('#particle-animation-trigger').waypoint(function() {
-    if (particlesAnimated)
-      return;
-    var wave = document.querySelector(".particles");
-    wave.setAttribute("class", "particles animate");
-
-    particlesAnimated = true;
-  });
-
-  $.fn.tagcloud.defaults = {
-    size: {start: 14, end: 18, unit: 'pt'},
-    color: {start: '#cde', end: '#f52'}
-  };
-  $('.lang-cloud a').tagcloud();
-
   $('#hire').mouseover(function () {
     $(this).addClass('animated tada');
   }).mouseout(function() {
     $(this).removeClass('animated tada');
   });
 
-
+  $(window).keydown(function(e){
+    console.log(e.keyCode());
+  });
 
   cubeInitialized = false;
   $('#simple-hack').waypoint(function() {
