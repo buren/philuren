@@ -37,7 +37,7 @@ var initCube = function () {
 
         amplitude: { type: "f", value: 1.0 },
         color:     { type: "c", value: new THREE.Color( 0xffffff ) },
-        texture:   { type: "t", value: THREE.ImageUtils.loadTexture( "textures/sprites/disc.png" ) },
+        texture:   { type: "t", value: THREE.ImageUtils.loadTexture( "textures/sprites/disc2.png" ) },
 
       };
 
@@ -55,13 +55,13 @@ var initCube = function () {
 
 
       var radius = 100, segments = 68, rings = 38;
-      var geometry = new THREE.SphereGeometry( radius, segments, rings );
+      // var geometry = new THREE.SphereGeometry( radius, segments, rings );
 
-      vc1 = geometry.vertices.length;
+      // vc1 = geometry.vertices.length;
 
-      var geometry2 = new THREE.CubeGeometry( 0.8 * radius, 0.8 * radius, 0.8 * radius, 10, 10, 10 );
+      var geometry = new THREE.CubeGeometry( 0.8 * radius, 0.8 * radius, 0.8 * radius, 10, 10, 10 );
 
-      THREE.GeometryUtils.merge( geometry, geometry2 );
+      // THREE.GeometryUtils.merge( geometry, geometry2 );
 
       sphere = new THREE.ParticleSystem( geometry, shaderMaterial );
 
@@ -77,22 +77,22 @@ var initCube = function () {
         values_size[ v ] = 10;
         values_color[ v ] = new THREE.Color( 0xffffff );
 
-        if ( v < vc1 ) {
+        // if ( v < vc1 ) {
 
-          values_color[ v ].setHSL( 0.01 + 0.1 * ( v / vc1 ), 0.99, ( vertices[ v ].y + radius ) / ( 4 * radius ) );
+        //   values_color[ v ].setHSL( 0.01 + 0.1 * ( v / vc1 ), 0.99, ( vertices[ v ].y + radius ) / ( 4 * radius ) );
 
-        } else {
+        // } else {
 
-          values_size[ v ] = 40;
-          values_color[ v ].setHSL( 0.6, 0.75, 0.25 + vertices[ v ].y / ( 2 * radius ) );
+        //   values_size[ v ] = 40;
+        //   values_color[ v ].setHSL( 0.6, 0.75, 0.25 + vertices[ v ].y / ( 2 * radius ) );
 
-        }
+        // }
 
       }
 
       scene.add( sphere );
 
-      renderer = new THREE.WebGLRenderer( { alpha: false } );
+      renderer = new THREE.WebGLRenderer( { alpha: true } );
       renderer.setSize( WIDTH, HEIGHT );
 
       var container = document.getElementById( 'webgl-container' );
