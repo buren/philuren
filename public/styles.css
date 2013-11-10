@@ -1,0 +1,41 @@
+.navbar-default .navbar-toggle{border-color:#101010}.navbar-default .navbar-toggle .icon-bar{background-color:#101010}
+.navbar-default{border-width:0;background:#ffffff;background-color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.8);margin:0 auto}.navbar-default .navbar-toggle{margin-top:22px}
+ul.nav.navbar-nav.navbar-right li{margin-top:5px !important}
+.navbar-default .navbar-toggle{margin-top:10px}
+.row{max-width:1170px}
+.logo{width:50px;height:50px;margin-left:30px}
+ul.nav.navbar-nav.navbar-right{margin-right:30px !important}ul.nav.navbar-nav.navbar-right li.active a{color:#fff;background-color:#101010}
+ul.nav.navbar-nav.navbar-right li{margin-top:20px}ul.nav.navbar-nav.navbar-right li a{color:#101010;font-size:14px;font-weight:800}ul.nav.navbar-nav.navbar-right li a .caret{font-size:14px}
+ul.nav.navbar-nav.navbar-right ul.dropdown-menu li{margin-top:0 !important}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a{color:#fff;font-size:14px;padding:10px 30px}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover{color:#fff}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover b{color:#fff}ul.nav.navbar-nav.navbar-right ul.dropdown-menu li a:hover b:hover{color:#fff}
+.navbar-default .navbar-nav>.dropdown>a .caret{border-top-color:#fff;border-bottom-color:#fff}
+.center{text-align:center}
+.bold{font-weight:700}
+.page-header-container{margin-top:142px}
+.page-header{background:url(/img/nepal.jpg);background-repeat:no-repeat;background-position:top;border-bottom:none;height:100%;margin-top:-120px;margin-bottom:0;padding-bottom:0;text-align:center}.page-header .page-header-content{max-width:750px;color:#101010;display:inline-block;margin-top:160px}.page-header .page-header-content .header-title{font-size:42px;vertical-align:middle;text-transform:capitalize}
+.page-header .page-header-content .header-sub-title{font-weight:200}
+.section{padding-top:40px;padding-bottom:60px}.section .top-arrow{margin-top:-95px;max-width:75px}
+.section .section-header-container{margin-bottom:70px}
+.section .section-header{text-align:center}
+.section .action-section{margin-top:40px}.section .action-section .title,.section .action-section .sub-title{text-transform:capitalize}
+.section .action-section .title{margin-top:20px;margin-bottom:10px}
+.section .action-section .sub-title{margin-top:10px}
+.section .action-section .action-btn{margin-top:20px;padding:18px 50px}
+img.header-img-logo,.footer-img-logo{max-width:90px;margin:-4px 0}
+ul.nav.navbar-nav.navbar-right li a{font-size:18px;font-family:'sequilight';margin-top:-2px}
+.footer{color:#fff;padding-bottom:40px}.footer .footer-col-header{margin-top:0;margin-bottom:20px}
+.footer a.page-link-footer{font-size:22px;color:#fff;display:block;margin:10px 0}
+.footer .footer-links a{text-decoration:none;color:#fff}.footer .footer-links a:hover{text-decoration:underline}
+.footer .footer-links a img{margin-right:10px;max-width:25px}
+@media (max-width:480px){.page-header .page-header-content{margin-top:80px}.page-header .page-header-content .header-title{font-size:38px} .footer .social-links img{max-width:25px}}@media (max-width:766px){body{margin:0;padding:0} .logo{margin-left:5px} .profile img{width:50px;height:50px;display:none} .profile-name{display:none} .page-header{margin-top:-145px;background-image:url('/img/nepal-smaller.png') !important;background-size:600px 1200px;margin-right:-20px;padding-bottom:80px}}@media (min-width:768px){.navbar-default{background-color:transparent;border-color:transparent;margin-top:30px} .page-header{margin-top:-142px}}@media (min-width:992px){}@media (min-width:1200px){}
+.hackathon-header,.hackathon-tilde,.hackathon-slogan{font-family:'sequilight'}
+.hackathon-header{font-size:72px}
+.hackathon-tilde{font-size:48px}
+.hackathon-slogan{font-size:18px;margin-bottom:80px}
+.profile{display:inline-block}.profile p{margin-top:15px;display:inline-block}
+.profile p.profile-intro-name{color:#101010}
+.profile-name{font-family:'sequilight';font-size:18px}
+.profile-image{width:80px;height:80px}
+.profile-intro-section{margin:240px 0;color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
+.profile-intro-section .profile-intro{margin-top:400px}.profile-intro-section .profile-intro .profile-intro-text-container{padding-top:15px;border-radius:5px;color:#101010;margin:0 auto;background-color:#e7e7e7;max-width:400px;min-height:400px}
+img.lang-logo{max-width:100px !important;display:inline-block !important}
+.trialbee img.media-image,.transputec img.media-image,.lth img.media-image{border:none !important}
