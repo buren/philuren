@@ -7,12 +7,14 @@ html
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.css')
     link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/sequi-light.css')
+    link(rel='stylesheet', href='/css/particles.css')
     link(rel='stylesheet', href='/styles.css')
 
     script(src='/fullscreen.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
     script(src='/three.min.js')
     script(src='/Detector.js')
     script(src='/stats.min.js')
@@ -24,6 +26,7 @@ html
     script(src='/js/navbar.js')
     script(src='/js/wink.js')
     script(src='/client.js')
+
     //- script(src='/helvetiker_bold.typeface.js')
     //- script(src='/text.js')
   body
@@ -38,13 +41,13 @@ html
       .collapse.navbar-collapse.navbar-ex1-collapse
         ul.nav.navbar-nav.navbar-right
           li.navbar-link
-            a(href='#about') Who we are
+            a(href='#about').anchor-link Who we are
           li.navbar-link
-            a(href='#timeline') What we've done
+            a(href='#timeline').anchor-link What we've done
           li.navbar-link
-            a(href='#simple-hack') What we can do
+            a(href='#simple-hack').anchor-link What we can do
           li.navbar-link
-            a(href='#hire-us') H!re us
+            a(href='#hire-us').anchor-link H!re us
 
     .page.page-header#about
       .container.page-header-container
@@ -52,7 +55,7 @@ html
           .col-xs-12.page-header-content
             h1.hackathon-header Philuren
             h5.hackathon-tilde ~~~~~~~~
-            h2.hackathon-slogan Coffee drinkers, Software tinkers
+            h2.hackathon-slogan#particle-animation-trigger Coffee drinkers, Software tinkers
             .profile(style='margin-right: 60px;')
               img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
               br
@@ -62,21 +65,264 @@ html
               br
               h1.profile-name buren
 
+    .container.section
+      .particles-content-container
+        .particles
+          .row-1
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-2
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-3
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-4
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-5
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-6
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-7
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-8
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-9
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-10
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-11
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-12
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-13
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-14
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+          .row-15
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
+            i
 
-    .section.profile-intro-section
+
+
+    .container.section.profile-intro-section
       .row
         .col-xs-12.col-sm-6.profile-intro
-          .profile
-            img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
-            br
-            p phifflarn
           .profile-intro-text-container
+            .profile
+              img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
             p An awesome introtext describing this fucker
         .col-xs-12.col-sm-6.profile-intro
           .profile
             img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
             br
-            p buren
+            p.profile-intro-name buren
           .profile-intro-text-container
             p An awesome introtext describing this fucker
 
