@@ -98,10 +98,10 @@ var initCube = function () {
       var container = document.getElementById( 'webgl-container' );
       container.appendChild( renderer.domElement );
 
-      stats = new Stats();
-      stats.domElement.style.position = 'absolute';
-      stats.domElement.style.top = '0px';
-      container.appendChild( stats.domElement );
+      // stats = new Stats();
+      // stats.domElement.style.position = 'absolute';
+      // stats.domElement.style.top = '0px';
+      // container.appendChild( stats.domElement );
 
       //
 
@@ -123,7 +123,7 @@ var initCube = function () {
       requestAnimationFrame( animate );
 
       render();
-      stats.update();
+      // stats.update();
 
     }
 
