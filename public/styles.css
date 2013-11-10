@@ -13,8 +13,9 @@ ul.nav.navbar-nav.navbar-right ul.dropdown-menu li{margin-top:0 !important}ul.na
 .center{text-align:center}
 .bold{font-weight:700}
 .page-header-container{margin-top:142px}
-.page-header{background:url(/img/nepal.jpg);background-repeat:no-repeat;background-position:top;border-bottom:none;height:100%;margin-top:-120px;margin-bottom:0;padding-bottom:0;text-align:center}.page-header .page-header-content{max-width:750px;color:#101010;display:inline-block;margin-top:160px}.page-header .page-header-content .header-title{font-size:42px;vertical-align:middle;text-transform:capitalize}
+.page-header{background:url('/img/nepal.jpg');background-repeat:no-repeat;background-position:top;border-bottom:none;height:100%;margin-top:-142px;margin-bottom:0;padding-bottom:142px;text-align:center}.page-header .page-header-content{max-width:750px;color:#101010;display:inline-block;margin-top:160px}.page-header .page-header-content .header-title{font-size:42px;vertical-align:middle;text-transform:capitalize}
 .page-header .page-header-content .header-sub-title{font-weight:200}
+.page-about{background:#242424;background-image:url('/img/noise.png');background-repeat:repeat}.page-about .break-line{position:relative;background:#fff;bottom:2px}
 .section{padding-top:40px;padding-bottom:60px}.section .top-arrow{margin-top:-95px;max-width:75px}
 .section .section-header-container{margin-bottom:70px}
 .section .section-header{text-align:center}
@@ -28,21 +29,20 @@ ul.nav.navbar-nav.navbar-right li a{font-size:18px;font-family:'sequilight';marg
 .footer a.page-link-footer{font-size:22px;color:#fff;display:block;margin:10px 0}
 .footer .footer-links a{text-decoration:none;color:#fff}.footer .footer-links a:hover{text-decoration:underline}
 .footer .footer-links a img{margin-right:10px;max-width:25px}
-@media (max-width:480px){.page-header .page-header-content{margin-top:80px}.page-header .page-header-content .header-title{font-size:38px} .footer .social-links img{max-width:25px}}@media (max-width:766px){body{margin:0;padding:0} .logo{margin-top:7px;margin-left:5px;width:40px;height:40px} .profile img{width:50px;height:50px;display:none} .profile-name{display:none} .page-header{margin-top:-145px;background-image:url('/img/nepal-smaller.png') !important;background-size:600px 1200px;margin-right:-20px;padding-bottom:145px}}@media (min-width:768px){.navbar-default{background-color:transparent;border-color:transparent;margin-top:30px} .page-header{margin-top:-142px}}@media only screen and (min-device-width:768px) and (max-device-width:1024px){.page-header{background-image:url('/img/nepal-smaller.png') !important;padding-bottom:140px !important;margin-right:-20px;margin-left:-20px}}@media (min-width:992px){}@media (min-width:1200px){}
+@media (max-width:480px){.page-header .page-header-content{margin-top:80px}.page-header .page-header-content .header-title{font-size:38px} .footer .social-links img{max-width:25px}}@media (max-width:766px){body{margin:0;padding:0} .logo{margin-top:7px;margin-left:5px;width:40px;height:40px} .profile img{width:50px;height:50px;display:none} .profile-name{display:none} .page-header{background-image:url('/img/nepal-smaller.png') !important;background-size:600px 1200px;margin-right:-20px}}@media (min-width:768px){.navbar-default{background-color:transparent;border-color:transparent;margin-top:30px}}@media only screen and (min-device-width:768px) and (max-device-width:1024px){.page-header{background-image:url('/img/nepal-smaller.png') !important}}@media (min-width:992px){}@media (min-width:1200px){}
 p.quote{margin-top:100px;font-family:'sequilight';font-weight:500;font-size:18px}
 p.citation{font-family:'sequilight';text-align:right;margin-right:100px}
 .hackathon-header,.hackathon-tilde,.hackathon-slogan{font-family:'sequilight'}
 .hackathon-header{font-size:72px}
 .hackathon-tilde{font-size:48px}
 .hackathon-slogan{font-size:18px;margin-bottom:80px}
-.page-about{background:#242424;background-image:url('/img/noise.png');background-repeat:repeat}
 .profile-intro-section .row{margin:0 auto}
 .profile{display:inline-block}.profile p{margin-top:15px;display:inline-block}
 .profile p.profile-intro-name{color:#101010}
 .profile-name{font-family:'sequilight';font-size:18px}
 .profile-image{width:80px;height:80px}
-.profile-intro-section{margin:240px 0;color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
-.profile-intro-section .profile-intro{margin-top:400px}.profile-intro-section .profile-intro .profile-intro-text-container{padding-top:15px;border-radius:5px;color:#101010;margin:0 auto;background-color:#e7e7e7;max-width:400px;min-height:400px}
+.profile-intro-section{color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
+.profile-intro-section .profile-intro .profile-intro-text-container{padding-top:15px;border-radius:5px;color:#101010;margin:0 auto;background-color:#e7e7e7;max-width:400px;min-height:400px}
 .page-hire{background:#242424;background-image:url('/img/noise.png');background-repeat:repeat}
 .lang-cloud a{margin:0 10px}
 img.lang-logo{max-width:100px !important;display:inline-block !important}
