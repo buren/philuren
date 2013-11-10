@@ -41,7 +41,7 @@ p.citation{font-family:'sequilight';text-align:right;margin-right:100px}
 .profile p.profile-intro-name{color:#101010}
 .profile-name{font-family:'sequilight';font-size:18px}
 .profile-image{width:80px;height:80px}
-.profile-intro-section{margin:240px 0;color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
+.profile-intro-section{color:#fff}.profile-intro-section .profile-intro:first-child{margin-top:0}
 .profile-intro-section .profile-intro{margin-top:400px}.profile-intro-section .profile-intro .profile-intro-text-container{padding-top:15px;border-radius:5px;color:#101010;margin:0 auto;background-color:#e7e7e7;max-width:400px;min-height:400px}
 .page-hire{background:#242424;background-image:url('/img/noise.png');background-repeat:repeat}
 .lang-cloud a{margin:0 10px}
