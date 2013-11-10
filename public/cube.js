@@ -7,247 +7,144 @@ var initCube = function () {
 
   if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-  var canvasBackgroundColor = 0xffffff;
+    var renderer, scene, camera, stats;
 
-  var container, stats;
+    var sphere, uniforms, attributes;
 
-  var camera, scene, renderer;
+    var vc1;
 
-  var mesh;
+    var WIDTH = window.innerWidth;
+    var HEIGHT = window.innerHeight;
 
-  init();
-  animate();
+    init();
+    animate();
 
-  function init() {
+    function init() {
 
-    container = document.getElementById( 'webgl-container' );
+      camera = new THREE.PerspectiveCamera( 45, WIDTH / HEIGHT, 1, 10000 );
+      camera.position.z = 300;
 
-    //
+      scene = new THREE.Scene();
 
-    camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 1, 3500 );
-    camera.position.z = 2750;
+      attributes = {
 
-    scene = new THREE.Scene();
-    scene.fog = new THREE.Fog( 0x050505, 2000, 3500 );
+        size: { type: 'f', value: [] },
+        ca:   { type: 'c', value: [] }
 
-    //
-
-    scene.add( new THREE.AmbientLight( 0x444444 ) );
-
-    var light1 = new THREE.DirectionalLight( 0xffffff, 0.5 );
-    light1.position.set( 1, 1, 1 );
-    scene.add( light1 );
-
-    var light2 = new THREE.DirectionalLight( 0xffffff, 1.5 );
-    light2.position.set( 0, -1, 0 );
-    scene.add( light2 );
-
-    //
-
-    var triangles = 160000;
-
-    var geometry = new THREE.BufferGeometry();
-
-    geometry.addAttribute( 'index', Uint16Array, triangles * 3, 1 );
-    geometry.addAttribute( 'position', Float32Array, triangles * 3, 3 );
-    geometry.addAttribute( 'normal', Float32Array, triangles * 3, 3 );
-    geometry.addAttribute( 'color', Float32Array, triangles * 3, 3 );
-
-    // break geometry into
-    // chunks of 21,845 triangles (3 unique vertices per triangle)
-    // for indices to fit into 16 bit integer number
-    // floor(2^16 / 3) = 21845
-
-    var chunkSize = 21845;
-
-
-    var indices = geometry.attributes.index.array;
-
-    for ( var i = 0; i < indices.length; i ++ ) {
-
-      indices[ i ] = i % ( 3 * chunkSize );
-
-    }
-
-    var positions = geometry.attributes.position.array;
-    var normals = geometry.attributes.normal.array;
-    var colors = geometry.attributes.color.array;
-
-    var color = new THREE.Color();
-
-    var n = 800, n2 = n/2;  // triangles spread in the cube
-    var d = 12, d2 = d/2; // individual triangle size
-
-    var pA = new THREE.Vector3();
-    var pB = new THREE.Vector3();
-    var pC = new THREE.Vector3();
-
-    var cb = new THREE.Vector3();
-    var ab = new THREE.Vector3();
-
-    for ( var i = 0; i < positions.length; i += 9 ) {
-
-      // positions
-
-      var x = Math.random() * n - n2;
-      var y = Math.random() * n - n2;
-      var z = Math.random() * n - n2;
-
-      var ax = x + Math.random() * d - d2;
-      var ay = y + Math.random() * d - d2;
-      var az = z + Math.random() * d - d2;
-
-      var bx = x + Math.random() * d - d2;
-      var by = y + Math.random() * d - d2;
-      var bz = z + Math.random() * d - d2;
-
-      var cx = x + Math.random() * d - d2;
-      var cy = y + Math.random() * d - d2;
-      var cz = z + Math.random() * d - d2;
-
-      positions[ i ]     = ax;
-      positions[ i + 1 ] = ay;
-      positions[ i + 2 ] = az;
-
-      positions[ i + 3 ] = bx;
-      positions[ i + 4 ] = by;
-      positions[ i + 5 ] = bz;
-
-      positions[ i + 6 ] = cx;
-      positions[ i + 7 ] = cy;
-      positions[ i + 8 ] = cz;
-
-      // flat face normals
-
-      pA.set( ax, ay, az );
-      pB.set( bx, by, bz );
-      pC.set( cx, cy, cz );
-
-      cb.subVectors( pC, pB );
-      ab.subVectors( pA, pB );
-      cb.cross( ab );
-
-      cb.normalize();
-
-      var nx = cb.x;
-      var ny = cb.y;
-      var nz = cb.z;
-
-      normals[ i ]     = nx;
-      normals[ i + 1 ] = ny;
-      normals[ i + 2 ] = nz;
-
-      normals[ i + 3 ] = nx;
-      normals[ i + 4 ] = ny;
-      normals[ i + 5 ] = nz;
-
-      normals[ i + 6 ] = nx;
-      normals[ i + 7 ] = ny;
-      normals[ i + 8 ] = nz;
-
-      // colors
-
-      var vx = ( x / n ) + 0.5;
-      var vy = ( y / n ) + 0.5;
-      var vz = ( z / n ) + 0.5;
-
-      color.setRGB( vx, vy, vz );
-
-      colors[ i ]     = color.r;
-      colors[ i + 1 ] = color.g;
-      colors[ i + 2 ] = color.b;
-
-      colors[ i + 3 ] = color.r;
-      colors[ i + 4 ] = color.g;
-      colors[ i + 5 ] = color.b;
-
-      colors[ i + 6 ] = color.r;
-      colors[ i + 7 ] = color.g;
-      colors[ i + 8 ] = color.b;
-
-    }
-
-    geometry.offsets = [];
-
-    var offsets = triangles / chunkSize;
-
-    for ( var i = 0; i < offsets; i ++ ) {
-
-      var offset = {
-        start: i * chunkSize * 3,
-        index: i * chunkSize * 3,
-        count: Math.min( triangles - ( i * chunkSize ), chunkSize ) * 3
       };
 
-      geometry.offsets.push( offset );
+      uniforms = {
+
+        amplitude: { type: "f", value: 1.0 },
+        color:     { type: "c", value: new THREE.Color( 0xffffff ) },
+        texture:   { type: "t", value: THREE.ImageUtils.loadTexture( "textures/sprites/disc.png" ) },
+
+      };
+
+      uniforms.texture.value.wrapS = uniforms.texture.value.wrapT = THREE.RepeatWrapping;
+
+      var shaderMaterial = new THREE.ShaderMaterial( {
+
+        uniforms:     uniforms,
+        attributes:     attributes,
+        vertexShader:   document.getElementById( 'vertexshader' ).textContent,
+        fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+        transparent:  true
+
+      });
+
+
+      var radius = 100, segments = 68, rings = 38;
+      var geometry = new THREE.SphereGeometry( radius, segments, rings );
+
+      vc1 = geometry.vertices.length;
+
+      var geometry2 = new THREE.CubeGeometry( 0.8 * radius, 0.8 * radius, 0.8 * radius, 10, 10, 10 );
+
+      THREE.GeometryUtils.merge( geometry, geometry2 );
+
+      sphere = new THREE.ParticleSystem( geometry, shaderMaterial );
+
+      sphere.dynamic = true;
+      sphere.sortParticles = true;
+
+      var vertices = sphere.geometry.vertices;
+      var values_size = attributes.size.value;
+      var values_color = attributes.ca.value;
+
+      for( var v = 0; v < vertices.length; v++ ) {
+
+        values_size[ v ] = 10;
+        values_color[ v ] = new THREE.Color( 0xffffff );
+
+        if ( v < vc1 ) {
+
+          values_color[ v ].setHSL( 0.01 + 0.1 * ( v / vc1 ), 0.99, ( vertices[ v ].y + radius ) / ( 4 * radius ) );
+
+        } else {
+
+          values_size[ v ] = 40;
+          values_color[ v ].setHSL( 0.6, 0.75, 0.25 + vertices[ v ].y / ( 2 * radius ) );
+
+        }
+
+      }
+
+      scene.add( sphere );
+
+      renderer = new THREE.WebGLRenderer( { alpha: false } );
+      renderer.setSize( WIDTH, HEIGHT );
+
+      var container = document.getElementById( 'webgl-container' );
+      container.appendChild( renderer.domElement );
+
+      stats = new Stats();
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.top = '0px';
+      container.appendChild( stats.domElement );
+
+      //
+
+      window.addEventListener( 'resize', onWindowResize, false );
 
     }
 
-    geometry.computeBoundingSphere();
+    function onWindowResize() {
 
-    var material = new THREE.MeshPhongMaterial( {
-        color: 0xaaaaaa, ambient: 0xaaaaaa, specular: 0xffffff, shininess: 250,
-        side: THREE.DoubleSide, vertexColors: THREE.VertexColors
-    } );
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
 
-    mesh = new THREE.Mesh( geometry, material );
-    scene.add( mesh );
+      renderer.setSize( window.innerWidth, window.innerHeight );
 
-    //
+    }
 
-    renderer = new THREE.WebGLRenderer( { antialias: false, alpha: true } );
-    renderer.setClearColor( canvasBackgroundColor, 1 );
+    function animate() {
+
+      requestAnimationFrame( animate );
+
+      render();
+      stats.update();
+
+    }
+
+    function render() {
+
+      var time = Date.now() * 0.005;
+
+      sphere.rotation.y = 0.02 * time;
+      sphere.rotation.z = 0.02 * time;
+
+      for( var i = 0; i < attributes.size.value.length; i ++ ) {
+
+        if ( i < vc1 )
+          attributes.size.value[ i ] = 16 + 12 * Math.sin( 0.1 * i + time );
 
 
-    renderer.setSize( window.innerWidth -20, window.innerHeight );
+      }
 
-    renderer.gammaInput = true;
-    renderer.gammaOutput = true;
-    renderer.physicallyBasedShading = true;
+      attributes.size.needsUpdate = true;
 
-    container.appendChild( renderer.domElement );
-
-    //
-    // Uncomment if stats are wanted
-    // stats = new Stats();
-    // stats.domElement.style.position = 'absolute';
-    // stats.domElement.style.top = '54px';
-    // container.appendChild( stats.domElement );
-
-    //
-
-    window.addEventListener( 'resize', onWindowResize, true );
-
-  }
-
-  function onWindowResize() {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
-  }
-
-  //
-
-  function animate() {
-
-    requestAnimationFrame( animate );
-
-    render();
-    // stats.update();
-
-  }
-
-  function render() {
-
-    var time = Date.now() * 0.001;
-
-    mesh.rotation.x = time * 0.25;
-    mesh.rotation.y = time * 0.5;
-
-    renderer.render( scene, camera );
+      renderer.render( scene, camera );
 
   }
 

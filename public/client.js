@@ -33,15 +33,17 @@ window.onload = function() {
   };
   $('.lang-cloud a').tagcloud();
 
-  cubeInitialized = false;
-  $('#simple-hack').waypoint(function() {
-    initCube();
-  });
-
   $('#hire').mouseover(function () {
     $(this).addClass('animated tada');
   }).mouseout(function() {
     $(this).removeClass('animated tada');
+  });
+
+
+
+  cubeInitialized = false;
+  $('#simple-hack').waypoint(function() {
+    initCube();
   });
 
 }
