@@ -64,7 +64,8 @@ window.onload = function() {
   var numberOfPages = $('.page').length;
 
   $(window).keydown(function(e){
-    e.preventDefault();
+    e.stopPropagation();
+
     var targetPageNumber;
 
     if (e.keyCode === 40)
@@ -74,8 +75,6 @@ window.onload = function() {
     else
       return;
 
-    // if ( targetPageNumber > 0 || targetPageNumber <  )
-      // numberOfPages
 
     var targetPage;
     $('.page').each(function() {

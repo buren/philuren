@@ -21,14 +21,15 @@ html
     script(src='/js/lib/raphael-min.js')
     script(src='/js/morris-0.4.3.min.js')
     script(src='/js/jquery.tagcloud.js')
+    script(src='/en.js')
+    script(src='/js/timeline-min.js')
     script(src='/js/particle-animation.js')
     script(src='/js/tagcloud.js')
     script(src='/three.min.js')
     script(src='/Detector.js')
     script(src='/stats.min.js')
     script(src='/cube.js')
-    script(src='/en.js')
-    script(src='/js/timeline-min.js')
+
     script(src='/storyjs-embed.js')
     script(src='/philuren-timeline.js')
     script(src='/js/navbar.js')
@@ -87,7 +88,9 @@ html
               | Moooo.
               span "
             p.citation - The Plague, "Hackers" 1995
-      div(style='margin-bottom: 142px;')
+        .row
+          .col-xs-12
+            div(style='margin-bottom: 142px;')
     .down-button-container
       p.center.down-button
         a(href='#who-we-are').anchor-link
@@ -144,6 +147,7 @@ html
                   a(href='#' rel='9') AppleScript,
                 li
                   a(href='#' rel='7') JavaScript
+
           .row
             .col-xs-12.col-sm-6
               h1.section-heading about
@@ -161,12 +165,12 @@ html
 
         .row
           .col-xs-12.col-sm-6
-            #donut-phifflarn
+            .donut#donut-phifflarn
           .col-xs-12.col-sm-6
-            #donut-buren
+            .donut#donut-buren
         .row
           .col-xs-12
-            #donut-all
+            .donut#donut-all
 
 
     .down-button-container.white
@@ -192,7 +196,7 @@ html
           | This dialog will dissapear when app is connected.
       #webgl-container
 
-    div(data-page-id='5').page.page-hire.section#hire-us
+    div(data-page-id='5').page.page-hire.section.visible-lg#hire-us
       .page.particles-content-container
         .particles
           .row-1
