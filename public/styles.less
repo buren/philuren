@@ -20,21 +20,37 @@
 //   }
 // }
 
-.break-line{
-  position: absolute;
-  bottom: 5px;
-  height: 10px;
-  width: 100%;
-  background-color: #242424;
-  background-image: url('/img/noise.png');
-  background-repeat: repeat;
+body{
+  line-height: 24px;
 }
 
-.down-button{
-  position: absolute;
-  bottom: 0px;
-  left:50%;
-  margin-left: -63px;
+.break-line{
+  height: 10px;
+  width: 100%;
+  background-color: @dark_grey;
+  background-image: url('/img/noise.png');
+  background-repeat: repeat;
+  margin-top: -33px;
+}
+
+
+.down-button-container {
+  background: @dark_grey;
+  background-image: url('/img/noise.png');
+  background-repeat: repeat;
+  p {
+    margin: 0;
+    /*border-top: 4px solid #101010;*/
+    /*border-top: 4px solid rgb(236,121,116); */
+  }
+  .down-button{
+    img {
+      margin-top: -120px;
+    }
+  }
+}
+.down-button-container.white {
+  background: #fff;
 }
 
 .navbar-default .navbar-toggle {
@@ -71,6 +87,7 @@ ul.nav.navbar-nav.navbar-right li {
     width: 50px;
     height: 50px;
     margin-left: 30px;
+    margin-top: 1px;
   }
 
 ul.nav.navbar-nav.navbar-right {
@@ -135,7 +152,7 @@ ul.nav.navbar-nav.navbar-right {
   height: 100%;
   margin-top: -142px;
   margin-bottom: 0;
-  padding-bottom: 142px;
+  /*padding-bottom: 142px;*/
   text-align: center;
   .page-header-content {
     max-width: 750px;
@@ -153,17 +170,12 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 
+
+
 .page-about{
   background: @dark_grey;
   background-image: url('/img/noise.png');
   background-repeat: repeat;
-
-  .break-line{
-    position: relative;
-    background: #fff;
-    bottom: 2px;
-  }
-
 }
 
 .page-cube{
@@ -176,6 +188,28 @@ ul.nav.navbar-nav.navbar-right {
     text-align: center;
     margin-top: 150px;
     margin-bottom: -150px;
+  }
+  .app-dialog{
+    position: relative;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px #000;
+    padding: 40px;
+    background: @transparent_white;
+    width:400px;
+    margin-top: 250px;
+    margin-bottom: -605px;
+
+    text-align: center;
+    h1{
+      color: black;
+      font-size: 32px;
+      margin:0;
+    }
+    h5{
+      font-family: 'sequilight';
+      font-size: 48px;
+    }
   }
 }
 

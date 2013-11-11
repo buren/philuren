@@ -79,9 +79,12 @@ html
               br
               | Moooo."
             p.citation - The Plague, "Hackers" 1995
-      .break-line
-      a(href='#who-we-are').anchor-link.down-button
-        img(src='/img/down2.png')
+      div(style='margin-bottom: 142px;')
+      .down-button-container
+        p.center.down-button
+          a(href='#who-we-are').anchor-link
+            img(src='/img/down2.png')
+          .break-line
 
     div(data-page-id='2').page.page-about#who-we-are
       .container.section.profile-intro-section
@@ -120,16 +123,29 @@ html
                 a(href='#' rel='10') HTML5
                 a(href='#' rel='8') AWS
                 a(href='#' rel='9') Bash
-      .break-line
-      a(href='#who-we-are').anchor-link.down-button
-        img(src='/img/down2.png')
 
+
+    .down-button-container.white
+      p.center.down-button
+        a(href='#who-we-are').anchor-link
+          img(src='/img/down2.png')
+        .break-line
 
     div(data-page-id='3').page.section#timeline
       #philuren-timeline
 
     div(data-page-id='4').page.page-cube.section#simple-hack
       h1 A Little experiment
+      .app-dialog
+        h1 Connect Android Device
+        h5 ~~~~~~~~~~
+        p
+          | This experiment requires an android counterpart.
+          br
+          br
+          | Please start the android app and place your android device upright next to the screen.
+          br
+          | This dialog will dissapear when app is connected.
       #webgl-container
 
     div(data-page-id='5').page.page-hire.section#hire-us

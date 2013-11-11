@@ -6,6 +6,8 @@ window.onload = function() {
     console.log(event.data);
   }
 
+  cubeInitialized = false;
+
   fullscreenPages();
 
   initTimeline();
@@ -16,7 +18,7 @@ window.onload = function() {
   $('a.anchor-link').click(function(e){
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+      scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 1000);
     return false;
   });
@@ -25,7 +27,7 @@ window.onload = function() {
     var pageNumber = $(this).attr('data-page-id');
     if (pageNumber === undefined)
       return;
-    _currentPageNumber = pageNumber;
+    _currentPageNumber = parseInt(pageNumber);
   });
 
   $('#hire').mouseover(function () {
@@ -36,20 +38,19 @@ window.onload = function() {
 
   $(window).keydown(function(e){
     e.preventDefault();
+    var targetPageNumber;
 
-    if (e.keyCode === 40) {}
-      // Key down
-    if (e.keyCode === 38) {}
-      // Key up
-
-    console.log(_currentPageNumber);
+    if (e.keyCode === 40)
+      targetPageNumber = _currentPageNumber + 1;
+    else if (e.keyCode === 38)
+      targetPageNumber = _currentPageNumber - 1;
+    else
+      return;
 
     var targetPage;
     $('.page').each(function() {
-      console.log($(this).attr('data-page-id'));
-      if ( $(this).attr('data-page-id') == _currentPageNumber + 1 ) {
+      if ( $(this).attr('data-page-id') == targetPageNumber ) {
         targetPage = $(this);
-        console.log('asodjkaskdjks');
       }
     });
 
@@ -59,9 +60,34 @@ window.onload = function() {
 
   });
 
-  cubeInitialized = false;
+
+  var hideDialog = function(){
+    $('.app-dialog').fadeOut(300);
+  }
+
+  var showDialog = function(){
+    $('.app-dialog').fadeIn(300);
+  }
+
   $('#simple-hack').waypoint(function() {
-    initCube();
+    // initCube();
+    //showDialog();
   });
+
+  var ws = new WebSocket('ws://10.0.1.4:3702');
+  ws.onmessage = function (event) {
+    // console.log(event.data);
+    var data = event.data;
+    console.log(data);
+    if(data == 'Phone connected'){
+      console.log('should init cube');
+      hideDialog();
+      initCube();
+    }else if(data == 'Phone disconnected'){
+      console.log('should tear down cube');
+      destroyCube();
+      showDialog();
+    }
+  }
 
 }
