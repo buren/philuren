@@ -11,6 +11,7 @@ html
     link(rel='stylesheet', href='/styles.css')
     link(rel='stylesheet', href='/css/animate.min.css')
     link(rel='stylesheet', href="/css/morris-0.4.3.min.css")
+    link(rel='stylesheet', href="/css/animated-checkboxes.css")
 
     script(src='/fullscreen.js')
     script(src='/js/lib/jquery.js')
@@ -34,7 +35,7 @@ html
     script(src='/js/wink.js')
     script(src='/client.js')
     script(src='/js/donut.js')
-
+    script(src='/js/svgcheckbx.js')
     //- script(src='/helvetiker_bold.typeface.js')
     //- script(src='/text.js')
   body
@@ -59,12 +60,13 @@ html
           li.navbar-link
             a(href='#hire-us').anchor-link H!re us
 
+
     div(data-page-id='1').page.page-header#about
       .container.page-header-container
         .row
           .col-xs-12.page-header-content
             h1.hackathon-header Philuren
-            h5.hackathon-tilde#particle-animation-trigger ~~~~~~~~
+            h5.hackathon-tilde ~~~~~~~~
             h2.hackathon-slogan Coffee drinkers, Software tinkers
             .profile(style='margin-right: 60px;')
               img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
@@ -75,13 +77,15 @@ html
               br
               h1.profile-name buren
             p.quote
-              | "We are Samurai... the Keyboard Cowboys...
+              span "
+              | We are Samurai... the Keyboard Cowboys...
               br
               | and all those other people who have no
               br
               | idea what's going on are the cattle...
               br
-              | Moooo."
+              | Moooo.
+              span "
             p.citation - The Plague, "Hackers" 1995
       div(style='margin-bottom: 142px;')
     .down-button-container
@@ -92,53 +96,77 @@ html
 
     div(data-page-id='2').page.page-about#who-we-are
       .container.section.profile-intro-section
-        .row
+        .row.section
           .col-xs-12.col-sm-6.profile-intro
-            .profile-intro-text-container
-              .profile
-                img(src='/img/phifflarn.png' data-src='/img/phifflarn.png' data-wink='/img/phifflarn-wink.png').profile-image#phifflarn-profile
-              p An awesome introtext describing this fucker
-              .lang-cloud
-                a(href='#' rel='30') Android
-                a(href='#' rel='28') Java
-                a(href='#' rel='12') Python
-                a(href='#' rel='15') OpenCV
-                br
-                a(href='#' rel='10') HTML5
-                a(href='#' rel='8') App Engine
-                a(href='#' rel='7') Bash
-                a(href='#' rel='9') AppleScript
-                br
-                a(href='#' rel='7') JavaScript
-          .col-xs-12.col-sm-6.profile-intro
-            .profile
-              img(src='/img/buren.png' data-src='/img/buren.png' data-wink='/img/buren-wink.png').profile-image#buren-profile
-              br
-              p.profile-intro-name buren
-            .profile-intro-text-container
-              p An awesome introtext describing this fucker
-              .lang-cloud
-                a(href='#' rel='12') Ruby
-                a(href='#' rel='22') Rails
-                a(href='#' rel='10') Java
-                a(href='#' rel='7') JavaScript
-                a(href='#' rel='5') CSS
-                br
-                a(href='#' rel='10') HTML5
-                a(href='#' rel='8') AWS
-                a(href='#' rel='9') Bash
-        .row
-          .col-xs-12.col-sm-4
-            h3.hack-circle 1337 KCLOC
-          .col-xs-12.col-sm-4
-            h3.hack-circle 1009 WTFs
-          .col-xs-12.col-sm-4
-            h3.hack-circle 127 words/min
+            h1(style='margin-left:15px;').section-heading philuren
+            .lang-cloud
+              form.ac-custom.ac-checkbox.ac-checkmark
+                .row
+                  .col-xs-12.col-sm-6
+                    ul
+                      li
+                        input(name='cb1' type='checkbox')#cb1
+                        label(for='cb1')
+                          a(href='#' rel='30') Android
+                      li
+                        input(name='cb2' type='checkbox')#cb2
+                        label(for='cb2')
+                          a(href='#' rel='28') Java
+                      li
+                        input(name='cb3' type='checkbox')#cb3
+                        label(for='cb3')
+                          a(href='#' rel='15') OpenCV
+                  .col-xs-12.col-sm-6
+                    ul
+                      li
+                        input(name='cb4' type='checkbox')#cb4
+                        label(for='cb4')
+                          a(href='#' rel='30') Ruby
+                      li
+                        input(name='cb5' type='checkbox')#cb5
+                        label(for='cb5')
+                          a(href='#' rel='24') Rails
+                      li
+                        input(name='cb6' type='checkbox')#cb6
+                        label(for='cb6')
+                          a(href='#' rel='18') iOS
+
+              ul.inline-list
+                li
+                  a(href='#' rel='12') Python,
+                li
+                  a(href='#' rel='10') HTML5,
+                li
+                  a(href='#' rel='8') App Engine,
+                li
+                  a(href='#' rel='7') Bash,
+                li
+                  a(href='#' rel='9') AppleScript,
+                li
+                  a(href='#' rel='7') JavaScript
+          .row
+            .col-xs-12.col-sm-6
+              h1.section-heading about
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+        //- .row
+        //-   .col-xs-12.col-sm-4
+        //-     h3.hack-circle 1337 KCLOC
+        //-   .col-xs-12.col-sm-4
+        //-     h3.hack-circle 1009 WTFs
+        //-   .col-xs-12.col-sm-4
+        //-     h3.hack-circle 127 words/min
+
         .row
           .col-xs-12.col-sm-6
             #donut-phifflarn
           .col-xs-12.col-sm-6
             #donut-buren
+        .row
+          .col-xs-12
+            #donut-all
 
 
     .down-button-container.white
@@ -155,7 +183,7 @@ html
       .app-dialog
         h1 Connect Android Device
         h5 ~~~~~~~~~~
-        p
+        p#particle-animation-trigger
           | This experiment requires an android counterpart.
           br
           br

@@ -16,6 +16,8 @@ window.onload = function() {
   initTagCloud();
   initParticleAnimation();
 
+  initAnimatedCheckboxes();
+
   $('a.anchor-link').click(function(e){
     e.preventDefault();
     $('html, body').animate({
@@ -31,11 +33,35 @@ window.onload = function() {
     _currentPageNumber = parseInt(pageNumber);
   });
 
+
+
+  var checkedBoxes = false;
+  $('#who-we-are').waypoint(function() {
+    if (checkedBoxes)
+      return;
+    var checkDelay = 400;
+    $('.ac-custom input').each(function(index, element) {
+      var inputTarget = $('#' + element.id);
+      if(inputTarget.attr('checked') == true)
+        return;
+      setTimeout(
+        function() {
+          inputTarget.trigger('click');
+        },
+        checkDelay*index);
+    });
+    checkedBoxes = true;
+  });
+
+
+
   $('#hire').mouseover(function () {
     $(this).addClass('animated tada');
   }).mouseout(function() {
     $(this).removeClass('animated tada');
   });
+
+  var numberOfPages = $('.page').length;
 
   $(window).keydown(function(e){
     e.preventDefault();
@@ -47,6 +73,9 @@ window.onload = function() {
       targetPageNumber = _currentPageNumber - 1;
     else
       return;
+
+    // if ( targetPageNumber > 0 || targetPageNumber <  )
+      // numberOfPages
 
     var targetPage;
     $('.page').each(function() {

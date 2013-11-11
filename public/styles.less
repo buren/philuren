@@ -33,7 +33,6 @@ body{
   margin-top: -43px;
 }
 
-
 .down-button-container {
   background: @dark_grey;
   background-image: url('/img/noise.png');
@@ -92,7 +91,7 @@ ul.nav.navbar-nav.navbar-right li {
   }
 
 ul.nav.navbar-nav.navbar-right {
-  /*margin-right: 30px !important;*/
+  margin-right: 30px !important;
   li.active {
       a {
         color: @white;
@@ -258,6 +257,24 @@ ul.nav.navbar-nav.navbar-right li a {
   }
 }
 
+.inline-list {
+  list-style-type: none;
+  /*margin: 0 0 0 42px;*/
+  margin-left: 35px;
+  margin-left: 15px;
+  padding: 0;
+  li {
+    display: inline;
+    margin-right: 5px;
+    a { margin: 0; }
+  }
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  font-family: 'sequilight';
+}
+
 
 .hack-circle {
   background: url(http://placehold.it/300x300);
@@ -390,6 +407,7 @@ p.quote{
   font-family: 'sequilight';
   font-weight: 500;
   font-size: 18px;
+  span { font-size: 26px; }
 }
 
 p.citation{
