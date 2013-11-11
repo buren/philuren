@@ -9,7 +9,8 @@
 }
 
 .particles {
-  width: 1000px;
+  display: none;
+  width: 960px;
   height: 50px;
   position: absolute;
   top: 50%;

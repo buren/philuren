@@ -24,15 +24,20 @@ body{
   line-height: 24px;
 }
 
+
+.donut {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .break-line{
   height: 10px;
   width: 100%;
   background-color: @dark_grey;
   background-image: url('/img/noise.png');
   background-repeat: repeat;
-  margin-top: -33px;
+  margin-top: -43px;
 }
-
 
 .down-button-container {
   background: @dark_grey;
@@ -45,7 +50,7 @@ body{
   }
   .down-button{
     img {
-      margin-top: -120px;
+      margin-top: -140px;
     }
   }
 }
@@ -79,6 +84,7 @@ ul.nav.navbar-nav.navbar-right li {
   margin-top: 10px;
 }
 
+
 .row {
   max-width: @site_width;
 }
@@ -91,7 +97,6 @@ ul.nav.navbar-nav.navbar-right li {
   }
 
 ul.nav.navbar-nav.navbar-right {
-  margin-right: 30px !important;
   li.active {
       a {
         color: @white;
@@ -135,6 +140,19 @@ ul.nav.navbar-nav.navbar-right {
   border-bottom-color: @white;
 }
 
+img.header-img-logo, .footer-img-logo {
+  max-width: 90px;
+  margin: -4px 0;
+}
+
+ul.nav.navbar-nav.navbar-right li a {
+  font-size: 18px;
+  font-family: 'sequilight';
+  margin-top: -2px;
+}
+
+
+
 .center { text-align: center; }
 
 .bold { font-weight: 700; }
@@ -147,7 +165,7 @@ ul.nav.navbar-nav.navbar-right {
   background: url('/img/nepal.jpg');
   background-repeat:no-repeat;
   background-position: top;
-  // background-size: 2000px 3001px;
+  /*// background-size: 2000px 3001px;*/
   border-bottom: none;
   height: 100%;
   margin-top: -142px;
@@ -170,8 +188,6 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 
-
-
 .page-about{
   background: @dark_grey;
   background-image: url('/img/noise.png');
@@ -191,12 +207,12 @@ ul.nav.navbar-nav.navbar-right {
   }
   .app-dialog{
     position: relative;
-    margin: 0 auto;
     border-radius: 3px;
     box-shadow: 0 1px 5px #000;
     padding: 40px;
     background: @transparent_white;
-    width:400px;
+    margin: 0 auto;
+    max-width:400px;
     margin-top: 250px;
     margin-bottom: -605px;
 
@@ -246,15 +262,31 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 
-img.header-img-logo, .footer-img-logo {
-  max-width: 90px;
-  margin: -4px 0;
+.inline-list {
+  list-style-type: none;
+  /*margin: 0 0 0 42px;*/
+  margin-top: 30px;
+  margin-left: 15px;
+  padding: 0;
+  li {
+    display: inline;
+    margin-right: 5px;
+    a { margin: 0; }
+  }
 }
 
-ul.nav.navbar-nav.navbar-right li a {
-  font-size: 18px;
+.section-heading {
+  margin-bottom: 30px;
   font-family: 'sequilight';
-  margin-top: -2px;
+}
+
+
+.hack-circle {
+  background: url(http://placehold.it/300x300);
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000px;
 }
 
 
@@ -330,9 +362,8 @@ ul.nav.navbar-nav.navbar-right li a {
   }
   .page-header{
     // margin-top: -145px;
-    background-image: url('/img/nepal-smaller.png')!important;
-    background-size: 600px 1200px;
-    margin-right: -20px;
+    background-image: url('/img/nepal-smaller.png') !important;
+    /*background-size: 600px 1200px;*/
     // padding-bottom: 145px;
   }
 }
@@ -345,6 +376,13 @@ ul.nav.navbar-nav.navbar-right li a {
   }
   .page-header {
     // margin-top: -142px;
+  }
+  ul.nav.navbar-nav.navbar-right {
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -360,7 +398,14 @@ and (max-device-width : 1024px)  {
 }
 
 /* Medium devices (desktops, 992px and up)  md */
-@media (min-width: 992px) { }
+@media (min-width: 992px) {
+  .particles {
+    display: block;
+  }
+  .ac-custom label {
+    padding: 0 0 0 60px;
+  }
+}
 
 /* Large devices (large desktops, 1200px and up)  lg */
 @media (min-width: 1200px) { }
@@ -376,6 +421,7 @@ p.quote{
   font-family: 'sequilight';
   font-weight: 500;
   font-size: 18px;
+  span { font-size: 26px; }
 }
 
 p.citation{
@@ -453,11 +499,19 @@ p.citation{
   background-image: url('/img/noise.png');
   background-repeat: repeat;
 }
+
 .lang-cloud {
+  font-size: 14pt;
   a {
     margin: 0 10px;
   }
+  label {
+    a {
+      margin: 0;
+    }
+  }
 }
+
 
 /* Overrides Timeline.js styling */
 img.lang-logo {
