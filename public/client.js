@@ -1,10 +1,10 @@
 window.onload = function() {
   _currentPageNumber = 1;
 
-  var ws = new WebSocket('ws://10.0.1.4:3702');
-	ws.onmessage = function (event) {
-    console.log(event.data);
-  }
+ //  var ws = new WebSocket('ws://10.0.1.4:3702');
+	// ws.onmessage = function (event) {
+ //    console.log(event.data);
+ //  }
 
   cubeInitialized = false;
 
@@ -60,6 +60,17 @@ window.onload = function() {
 
   });
 
+  var parseData = function(data){
+    var components = data.split(',');
+    if(components[0] == "s"){
+      rotationX += parseInt(components[1]);
+      rotationY += parseInt(components[2]);
+    }
+    else if(components[0] == "z"){
+      console.log('ZOOOOOOOOM');
+    }
+    // console.log(components);
+  }
 
   var hideDialog = function(){
     $('.app-dialog').fadeOut(300);
@@ -78,7 +89,7 @@ window.onload = function() {
   ws.onmessage = function (event) {
     // console.log(event.data);
     var data = event.data;
-    console.log(data);
+    // console.log(data);
     if(data == 'Phone connected'){
       console.log('should init cube');
       hideDialog();
@@ -87,6 +98,9 @@ window.onload = function() {
       console.log('should tear down cube');
       destroyCube();
       showDialog();
+    }
+    else{
+      parseData(data);
     }
   }
 
