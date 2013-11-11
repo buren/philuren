@@ -1,3 +1,8 @@
+var rotationX = 0;
+var rotationY = 0;
+
+var totalRotationX = 0;
+var totalRotationY = 0;
 var initCube = function () {
 
   $('#webgl-container').fadeIn(300);
@@ -64,6 +69,7 @@ var initCube = function () {
       cube.dynamic = true;
       cube.sortParticles = true;
 
+
       var vertices = cube.geometry.vertices;
       var values_size = attributes.size.value;
       var values_color = attributes.ca.value;
@@ -93,10 +99,56 @@ var initCube = function () {
       // stats.update();
     }
 
+    var rotWorldMatrix;
+
+    function rotateAroundWorldAxis(object, axis, radians) {
+      rotWorldMatrix = new THREE.Matrix4();
+      rotWorldMatrix.makeRotationAxis(axis.normalize(), radians);
+
+    // old code for Three.JS pre r54:
+    //  rotWorldMatrix.multiply(object.matrix);
+    // new code for Three.JS r55+:
+      rotWorldMatrix.multiply(object.matrix);                // pre-multiply
+
+      object.matrix = rotWorldMatrix;
+
+    // old code for Three.js pre r49:
+    // object.rotation.getRotationFromMatrix(object.matrix, object.scale);
+    // new code for Three.js r50+:
+      object.rotation.setFromRotationMatrix(object.matrix);
+    }
+
+    var xAxis;
+    var yAxis;
+
     function render() {
-      var time = Date.now() * 0.005;
-      cube.rotation.y = 0.02 * time;
-      cube.rotation.z = 0.02 * time;
+      if(xAxis === undefined && yAxis === undefined){
+        xAxis = new THREE.Vector3(0,1,0);
+        yAxis = new THREE.Vector3(1,0,0);
+      }
+      rotationX *= 0.95;
+      rotationY *= 0.95;
+      if(Math.abs(rotationX) < 1){
+        rotationX = 0;
+      }
+      if(Math.abs(rotationY) < 1){
+        rotationY = 0
+      }
+      // var time = Date.now() * 0.005;
+      // cube.rotation.y = 1 + (0.0002 ) * time + rotationY;
+      // console.log(cube.rotation.y);
+      totalRotationX -= rotationX/100;
+      //cube.rotation.y = 0.001 * totalRotationX;
+      totalRotationY += rotationY/100;
+
+      // rotateAroundWorldAxis(cube, xAxis, 0.001 * totalRotationX * Math.PI / 180);
+      rotateAroundWorldAxis(cube, xAxis, 0.1 * (-rotationX) * Math.PI / 180);
+      rotateAroundWorldAxis(cube, yAxis, 0.1 * rotationY * Math.PI / 180);
+      //rotateAroundWorldAxis(cube, yAxis, 0.001 * totalRotationX * Math.PI / 180);
+      // rotateAroundWorldAxis(cube, yAxis, totalRotationY);
+      //cube.rotation.x = 0.001 * totalRotationY;
+      // cube.rotation.z = 0.02 * time;
+
 
       for( var i = 0; i < attributes.size.value.length; i ++ ) {
         if ( i < vc1 )
