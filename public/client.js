@@ -10,6 +10,7 @@ window.onload = function() {
 
   fullscreenPages();
 
+  initDonut();
   initTimeline();
   initWink();
   initTagCloud();
