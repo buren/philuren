@@ -204,6 +204,9 @@ ul.nav.navbar-nav.navbar-right li a {
   background: @dark_grey;
   background-image: url('/img/noise.png');
   background-repeat: repeat;
+  p{
+    line-height: 24px;
+  }
 }
 
 
@@ -525,11 +528,34 @@ p.citation{
 }
 
 .page-hire{
-  background: @dark_grey;
-  background-image: url('/img/noise.png');
-  background-repeat: repeat;
-}
+  background: white;
+  // background-image: url('/img/noise.png');
+  // background-repeat: repeat;
+  background-image: url('img/logo-transparent.png');
+  background-position: center;
+  background-repeat: no-repeat;
 
+  h1{
+    color: black;
+    font-family: 'sequilight';
+    text-align: center;
+    padding-top:100px;
+    margin-bottom: -190px;
+  }
+}
+.hire-button{
+  font-family: 'sequilight';
+  font-size: 32px;
+  color: black;
+  padding: 10px 40px;
+  border: 1px solid black !important;
+  margin: 0 auto!important;
+  border-radius: 2px;
+  display: block;
+  width:200px;
+  margin-top: -200px!important;
+  cursor: pointer;
+}
 .lang-cloud {
   a {
     margin: 0 10px;
