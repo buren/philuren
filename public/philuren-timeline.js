@@ -28,11 +28,11 @@ var initTimeline = function () {
         "startDate":"2013,01,30",
         "endDate":"2013,10,25",
         "headline":"Camera Based Gesture Detection For Android Devices",
-        "text":"<p>Description</p>",
+        "text":"<p>My Thesis. I created a gesture detection framework for android devices. The thesis resulted in 4 novel gesture detection algorithms with two pending patents.</p>",
         "tag":"phifflarn",
         "classname":"thesis",
         "asset": {
-          "media":"/img/sony.jpg",
+          "media":"/img/exjobb.jpg",
           "credit":"",
           "caption":""
         }
@@ -40,25 +40,12 @@ var initTimeline = function () {
       {
         "startDate":"2013,05,30",
         "endDate":"2013,09,23",
-        "headline":"Technical Editor for Android Pushing the Limits by Erik Hellman",
-        "text":"<p>Awesome</p>",
+        "headline":"Technical Editor for Android Pushing the Limits",
+        "text":"<p>A book about advaned android features written by Erik Hellman published on Whiley</p>",
         "tag":"phifflarn",
         "classname":"editor",
         "asset": {
-          "media":"/img/sony.jpg",
-          "credit":"",
-          "caption":""
-        }
-      },
-      {
-        "startDate":"2011,03,03",
-        "endDate":"2011,05,23",
-        "headline":"Edith",
-        "text":"<p>Wrote iOS portable Web Development app</p>",
-        "tag":"phifflarn",
-        "classname":"edith",
-        "asset": {
-          "media":"/img/sony.jpg",
+          "media":"/img/android-ptl.jpg",
           "credit":"",
           "caption":""
         }
