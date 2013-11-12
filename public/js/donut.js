@@ -1,6 +1,6 @@
 var initDonut = function () {
   Morris.Donut({
-    element: 'donut-phifflarn',
+    element: 'donut-one',
     data: [
       { label: "Coffee", value: 12 },
       { label: "Dumbness", value: 50 },
@@ -13,7 +13,7 @@ var initDonut = function () {
   });
 
   Morris.Donut({
-    element: 'donut-buren',
+    element: 'donut-last',
     data: [
       { label: "Coffee", value: 16 },
       { label: "Polish debugging", value: 30 },
