@@ -2,19 +2,6 @@ var initDonut = function () {
   Morris.Donut({
     element: 'donut-one',
     data: [
-      { label: "Coffee", value: 12 },
-      { label: "Dumbness", value: 50 },
-      { label: "Beer", value: 8 },
-      { label: "Luck", value: 18 },
-      { label: "Balmer Peek", value: 22 }
-    ],
-    backgroundColor: '#242424',
-    labelColor: '#ffffff'
-  });
-
-  Morris.Donut({
-    element: 'donut-last',
-    data: [
       { label: "Coffee", value: 16 },
       { label: "Polish debugging", value: 30 },
       { label: "Divide & Conquer", value: 20 },
