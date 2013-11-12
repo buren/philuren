@@ -118,6 +118,12 @@ window.onload = function() {
     //showDialog();
   });
 
+  $('.particles-content-container').click(function () {
+    $('html, body').animate({
+      scrollTop: $('#built-with').offset().top
+    }, 1000);
+  });
+
 
   var ws = new WebSocket('ws://10.0.1.4:3702');
   ws.onmessage = function (event) {
