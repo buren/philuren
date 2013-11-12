@@ -8,7 +8,6 @@ html
     link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/sequi-light.css')
     link(rel='stylesheet', href='/css/particles.css')
-    link(rel='stylesheet', href='/css/line-graph.css')
     link(rel='stylesheet', href='/styles.css')
     link(rel='stylesheet', href='/css/animate.min.css')
     link(rel='stylesheet', href="/css/morris-0.4.3.min.css")
@@ -102,7 +101,7 @@ html
       .container.section.profile-intro-section
         .row.section
           .col-xs-12.col-sm-6.profile-intro
-            h1(style='margin-left:15px;').section-heading philuren
+            h1(style='margin-left:15px;').section-heading What we do
             .lang-cloud
               form.ac-custom.ac-checkbox.ac-checkmark
                 .row
@@ -137,7 +136,7 @@ html
 
               ul.inline-list
                 li
-                  a(href='#' rel='12') Python,
+                  a(href='#' rel='12') Cocoa,
                 li
                   a(href='#' rel='7') JavaScript,
                 li
@@ -160,12 +159,13 @@ html
 
           .row
             .col-xs-12.col-sm-6
-              h1.section-heading about
+              h1.section-heading about us
               .about-text
                 p(style='margin-top:45px') Philuren tinkers with everything from front- and backend Web development to hardcode computer vision algorithms.
                 p German techno, code and beer are mandatory.
                 p Primarly coffee drinkers, occasionally software tinkerers.
                 iframe(width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97966984"  class='soundcloud')
+
 
         //- .row
         //-   .col-xs-12.col-sm-4
@@ -212,13 +212,9 @@ html
         a(href='#hire-us').anchor-link
           img(src='/img/down-inverted.png')
         .break-line
-    .down-button-container.white-upside-down
-      p.center.down-button
-        a(href='#simple-hack').anchor-link
-          img(src='/img/up-white.png')
-        .break-line
     div(data-page-id='5').page.page-hire.section.visible-lg#hire-us
-      .particles-content-container
+      h1 We Love Particles
+      .page.particles-content-container
         .particles
           .row-1
             i
@@ -460,11 +456,10 @@ html
             i
             i
             i
-      .container
-        .row
-          .col-xs-12
-            p.center
-              a.btn.btn-lg.btn-primary#hire philuren.hire.now!()
+
+      a.btn.btn-lg.hire-button#hire H!R3 U5
+
+
 
       //- .page
       //- #webgl-text
