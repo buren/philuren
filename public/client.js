@@ -118,14 +118,6 @@ window.onload = function() {
     //showDialog();
   });
 
-  $('#hire').click(function () {
-    $('#sure').fadeIn(300);
-  });
-
-  $('#sure').click(function () {
-    $('#hired').fadeIn(300);
-  });
-
 
   var ws = new WebSocket('ws://10.0.1.4:3702');
   ws.onmessage = function (event) {
