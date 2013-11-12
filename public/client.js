@@ -33,8 +33,6 @@ window.onload = function() {
     _currentPageNumber = parseInt(pageNumber);
   });
 
-
-
   var checkedBoxes = false;
   $('#who-we-are').waypoint(function() {
     if (checkedBoxes)
@@ -74,6 +72,12 @@ window.onload = function() {
       targetPageNumber = _currentPageNumber - 1;
     else
       return;
+
+    if ( targetPageNumber > numberOfPages )
+      targetPageNumber = numberOfPages;
+
+    if ( targetPageNumber < 1 )
+      targetPageNumber = 1;
 
 
     var targetPage;
