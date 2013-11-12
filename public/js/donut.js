@@ -9,7 +9,8 @@ var initDonut = function () {
       { label: "Balmer Peek", value: 22 }
     ],
     backgroundColor: '#242424',
-    labelColor: '#ffffff'
+    labelColor: '#ffffff',
+    gridTextFamily: 'sequilight'
   });
 
 }
