@@ -25,13 +25,4 @@ var initDonut = function () {
     labelColor: '#ffffff'
   });
 
-  Morris.Donut({
-    element: 'donut-all',
-    data: [
-      { label: "awesome", value: 100 }
-    ],
-    backgroundColor: '#242424',
-    labelColor: '#ffffff'
-  });
-
 }
