@@ -53,8 +53,21 @@ body{
     }
   }
 }
+
 .down-button-container.white {
-  background: #fff;
+  .break-line{
+    background: white;
+    background-image: url('/img/noise.png');
+  }
+}
+
+.down-button-container.white-upside-down {
+  padding-top:72px;
+  .break-line{
+    margin-top: -90px!important;
+    background: white;
+    background-image: url('/img/noise.png');
+  }
 }
 
 .navbar-default .navbar-toggle {
@@ -195,6 +208,7 @@ ul.nav.navbar-nav.navbar-right li a {
 
 
 .page-timeline{
+  background-image: url('/img/noise.png');
   h1{
     text-align: center;
     font-family: 'sequilight';
@@ -401,11 +415,12 @@ ul.nav.navbar-nav.navbar-right li a {
   }
 }
 
+//IPAD!
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
   .page-header{
-    background-image: url('/img/nepal-smaller.png')!important;
+    background-image: url('/img/nepal-ipad.png')!important;
     // padding-bottom: 140px !important;
     // margin-right: -20px;
     // margin-left: -20px;

@@ -12,6 +12,19 @@ var initTimeline = function () {
     },
     "date": [
       {
+        "startDate":"2012,6,10",
+        "endDate":"2013,02,1",
+        "headline":"Sony Mobile Reaearch, Advanced Enabler Lab",
+        "text":"<p>I have developed a set of gesture detection algorithms using open cv, a webrtc videochat client for andoid devices and a tremor detector.</p>",
+        "tag":"phifflarn",
+        "classname":"Sony Mobile",
+        "asset": {
+          "media":"/img/sony.jpg",
+          "credit":"",
+          "caption":""
+        }
+      },
+      {
         "startDate":"2013,01,30",
         "endDate":"2013,10,25",
         "headline":"Camera Based Gesture Detection For Android Devices",
