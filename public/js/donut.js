@@ -8,6 +8,7 @@ var initDonut = function () {
       { label: "Luck", value: 18 },
       { label: "Balmer Peek", value: 22 }
     ],
+    colors:['#3b3b3b', '#5f5f5f', '#939393', '#bbbbbb', '#dedede',],
     backgroundColor: '#242424',
     labelColor: '#ffffff',
     gridTextFamily: 'sequilight'
